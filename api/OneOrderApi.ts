@@ -35,9 +35,10 @@ export class OneOrderApi {
         * @param changeOrderType The order change type
         * @param userName Sometimes the user in the e-commerce application is not the same than the subscription key you indicate in your settings. We recommand you to indicate the login of the user in your appplication.
         * @param request 
+        * @param ifMatch To ensure that you are making a change on the lastest version of the order. ETag value to identify the order given in the order information. \\ For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3 
         * @param testMode If true, the operation will be be commited. But the validation will be taken in account.
         */
-    public changeOrder (marketplaceTechnicalCode: string, accountId: number, beezUPOrderId: string, changeOrderType: string, userName: string, request: models.ChangeOrderRequest, testMode?: boolean, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ChangeOrderResponse> {
+    public changeOrder (marketplaceTechnicalCode: string, accountId: number, beezUPOrderId: string, changeOrderType: string, userName: string, request: models.ChangeOrderRequest, ifMatch: string, testMode?: boolean, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
         const localVarPath = this.basePath + '/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/{changeOrderType}'
             .replace('{' + 'marketplaceTechnicalCode' + '}', String(marketplaceTechnicalCode))
             .replace('{' + 'accountId' + '}', String(accountId))
@@ -70,6 +71,10 @@ export class OneOrderApi {
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling changeOrder.');
         }
+        // verify required parameter 'ifMatch' is not null or undefined
+        if (ifMatch === null || ifMatch === undefined) {
+            throw new Error('Required parameter ifMatch was null or undefined when calling changeOrder.');
+        }
         if (userName !== undefined) {
             queryParameters['userName'] = userName;
         }
@@ -77,6 +82,8 @@ export class OneOrderApi {
         if (testMode !== undefined) {
             queryParameters['testMode'] = testMode;
         }
+
+        headerParams['If-Match'] = ifMatch;
 
         let httpRequestParams: ng.IRequestConfig = {
             method: 'POST',
@@ -138,8 +145,9 @@ export class OneOrderApi {
         * @param marketplaceTechnicalCode The marketplace technical code
         * @param accountId The account identifier
         * @param beezUPOrderId The order BeezUP identifier
+        * @param ifNoneMatch ETag value to identify the order given in the order information. \\ For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3 
         */
-    public getOrder (marketplaceTechnicalCode: string, accountId: number, beezUPOrderId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.Order> {
+    public getOrder (marketplaceTechnicalCode: string, accountId: number, beezUPOrderId: string, ifNoneMatch?: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.Order> {
         const localVarPath = this.basePath + '/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}'
             .replace('{' + 'marketplaceTechnicalCode' + '}', String(marketplaceTechnicalCode))
             .replace('{' + 'accountId' + '}', String(accountId))
@@ -159,6 +167,8 @@ export class OneOrderApi {
         if (beezUPOrderId === null || beezUPOrderId === undefined) {
             throw new Error('Required parameter beezUPOrderId was null or undefined when calling getOrder.');
         }
+        headerParams['If-None-Match'] = ifNoneMatch;
+
         let httpRequestParams: ng.IRequestConfig = {
             method: 'GET',
             url: localVarPath,

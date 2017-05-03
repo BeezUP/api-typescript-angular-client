@@ -13,10 +13,9 @@
 import * as models from './models';
 
 /**
- * Contains the order identifier and the change order request
+ * The response given by the batch operation
  */
-export interface ChangeOrderListRequestItem {
-    "order": models.OrderIdentifierWithETag;
-    "changeOrderRequest": models.ChangeOrderRequest;
+export interface BatchOrderOperationResponse {
+    "operations"?: Array<models.OrderOperationResponse>;
 }
 

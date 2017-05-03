@@ -12,11 +12,9 @@
 
 import * as models from './models';
 
-/**
- * Contains the order identifier and the change order request
- */
-export interface ChangeOrderListRequestItem {
-    "order": models.OrderIdentifierWithETag;
-    "changeOrderRequest": models.ChangeOrderRequest;
+export interface CurrentContractInfoLinks {
+    "self": models.LinksGetContractsLink;
+    "disable"?: models.LinksTerminateCurrentContractLink;
+    "reenable"?: models.LinksReactivateCurrentContractLink;
 }
 

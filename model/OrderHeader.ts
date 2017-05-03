@@ -46,10 +46,7 @@ export interface OrderHeader {
     "orderTotalPrice"?: number;
     "orderCurrencyCode"?: models.BeezUPCommonCurrencyCode;
     "processing": models.Processing;
-    /**
-     * ETag value to identify the order. For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3 
-     */
-    "eTag": string;
+    "etag": models.Etag;
     "links": Array<models.BeezUPCommonLink2>;
 }
 

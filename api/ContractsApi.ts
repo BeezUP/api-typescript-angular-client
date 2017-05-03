@@ -99,55 +99,11 @@ export class ContractsApi {
         return this.$http(httpRequestParams);
     }
     /**
-        * Get contracts links
+        * Get contract list
         * 
         */
-    public getContractsLinks (extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.BeezUPCommonLink2>> {
+    public getContracts (extraHttpRequestParams?: any ) : ng.IHttpPromise<models.Contracts> {
         const localVarPath = this.basePath + '/v2/user/customer/contracts';
-
-        let queryParameters: any = {};
-        let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
-        let httpRequestParams: ng.IRequestConfig = {
-            method: 'GET',
-            url: localVarPath,
-                                    params: queryParameters,
-            headers: headerParams
-        };
-
-        if (extraHttpRequestParams) {
-            httpRequestParams = (<any>Object).assign(httpRequestParams, extraHttpRequestParams);
-        }
-
-        return this.$http(httpRequestParams);
-    }
-    /**
-        * Get the conditions of your current contract
-        * 
-        */
-    public getCurrentContract (extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ContractInfo> {
-        const localVarPath = this.basePath + '/v2/user/customer/contracts/current';
-
-        let queryParameters: any = {};
-        let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
-        let httpRequestParams: ng.IRequestConfig = {
-            method: 'GET',
-            url: localVarPath,
-                                    params: queryParameters,
-            headers: headerParams
-        };
-
-        if (extraHttpRequestParams) {
-            httpRequestParams = (<any>Object).assign(httpRequestParams, extraHttpRequestParams);
-        }
-
-        return this.$http(httpRequestParams);
-    }
-    /**
-        * Get the conditions of your next contract
-        * 
-        */
-    public getNextContract (extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ContractInfo> {
-        const localVarPath = this.basePath + '/v2/user/customer/contracts/next';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);

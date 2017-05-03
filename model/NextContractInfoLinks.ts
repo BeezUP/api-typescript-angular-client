@@ -12,11 +12,8 @@
 
 import * as models from './models';
 
-/**
- * Contains the order identifier and the change order request
- */
-export interface ChangeOrderListRequestItem {
-    "order": models.OrderIdentifierWithETag;
-    "changeOrderRequest": models.ChangeOrderRequest;
+export interface NextContractInfoLinks {
+    "self": models.LinksGetContractsLink;
+    "delete"?: models.LinksDeleteNextContractLink;
 }
 

@@ -16,6 +16,11 @@ import * as models from './models';
  * The different actions you can make on this account
  */
 export interface AccountInfoLinks {
-    "tbd"?: models.BeezUPCommonLink3;
+    "savePersonalInfo"?: models.LinksSavePersonalInfoLink;
+    "changePassword"?: models.LinksChangePasswordLink;
+    "saveCompanyInfo"?: models.LinksSaveCompanyInfoLink;
+    "saveProfilePictureInfo"?: models.LinksSaveProfilePictureInfoLink;
+    "getCreditCardInfo"?: models.LinksGetCreditCardInfoLink;
+    "saveUserCreditCardLink"?: models.LinksSaveCreditCardInfoLink;
 }
 

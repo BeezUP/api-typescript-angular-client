@@ -12,11 +12,10 @@
 
 import * as models from './models';
 
-/**
- * Contains the order identifier and the change order request
- */
-export interface ChangeOrderListRequestItem {
-    "order": models.OrderIdentifierWithETag;
-    "changeOrderRequest": models.ChangeOrderRequest;
+export interface OrderIdentifierWithETag {
+    "marketplaceTechnicalCode": models.MarketplaceTechnicalCode;
+    "accountId": models.AccountId;
+    "beezUPOrderId": models.BeezUPOrderId;
+    "etag": models.Etag;
 }
 

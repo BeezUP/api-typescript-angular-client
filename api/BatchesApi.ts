@@ -34,7 +34,7 @@ export class BatchesApi {
         * @param request 
         * @param testMode If true, the operation will be be commited. But the validation will be taken in account.
         */
-    public changeOrderList (changeOrderType: string, userName: string, request: models.ChangeOrderListRequest, testMode?: boolean, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
+    public changeOrderList (changeOrderType: string, userName: string, request: models.ChangeOrderListRequest, testMode?: boolean, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.BatchOrderOperationResponse> {
         const localVarPath = this.basePath + '/v2/user/marketplaces/orders/batches/changeOrders/{changeOrderType}'
             .replace('{' + 'changeOrderType' + '}', String(changeOrderType));
 
@@ -79,7 +79,7 @@ export class BatchesApi {
         * The purpose of this  operation is to reduce the amount of request to the API.
         * @param request 
         */
-    public clearMerchantOrderInfoList (request: models.ClearMerchantOrderInfoListRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
+    public clearMerchantOrderInfoList (request: models.ClearMerchantOrderInfoListRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.BatchOrderOperationResponse> {
         const localVarPath = this.basePath + '/v2/user/marketplaces/orders/batches/clearMerchantOrderInfos';
 
         let queryParameters: any = {};
@@ -107,7 +107,7 @@ export class BatchesApi {
         * The purpose of this  operation is to reduce the amount of request to the API.
         * @param request 
         */
-    public setMerchantOrderInfoList (request: models.SetMerchantOrderInfoListRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
+    public setMerchantOrderInfoList (request: models.SetMerchantOrderInfoListRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.BatchOrderOperationResponse> {
         const localVarPath = this.basePath + '/v2/user/marketplaces/orders/batches/setMerchantOrderInfos';
 
         let queryParameters: any = {};

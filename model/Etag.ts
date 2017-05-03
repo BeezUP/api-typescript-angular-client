@@ -13,10 +13,8 @@
 import * as models from './models';
 
 /**
- * Contains the order identifier and the change order request
+ * ETag value to identify the order. \\ This information is required for the operation GetOrder and ChangeOrder. \\ For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3 
  */
-export interface ChangeOrderListRequestItem {
-    "order": models.OrderIdentifierWithETag;
-    "changeOrderRequest": models.ChangeOrderRequest;
+export interface Etag {
 }
 
