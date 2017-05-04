@@ -88,6 +88,7 @@ export * from './CatalogColumnName';
 export * from './CatalogColumns';
 export * from './Categories';
 export * from './Category';
+export * from './CategoryMappingState';
 export * from './CategoryMappingStatus';
 export * from './ChangeCustomColumnExpressionRequest';
 export * from './ChangeCustomColumnRequest';

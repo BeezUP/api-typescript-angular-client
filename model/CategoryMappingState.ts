@@ -13,12 +13,17 @@
 import * as models from './models';
 
 /**
- * Channel Catalog Status
+ * The category mapping state of the channel catalog
  */
-export interface ChannelCatalogStatus {
-    "exportedProductCount": number;
-    "columnMappingStatus": models.ColumnMappingStatus;
-    "categoryMappingState"?: models.CategoryMappingState;
-    "apiSettingStatus": models.ApiSettingStatus;
+export interface CategoryMappingState {
+    "status"?: models.CategoryMappingStatus;
+    /**
+     * Indicates the uncategorized product count
+     */
+    "uncategorizedProductCount"?: number;
+    /**
+     * Indicates the categorized product count without cost defined on the category
+     */
+    "categorizedWithoutCostProductCount"?: number;
 }
 
