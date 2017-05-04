@@ -19,7 +19,7 @@ export interface ChannelCatalog {
     /**
      * The product count exported considering category mapping. Not all filters have been applied.
      */
-    "productCount"?: number;
+    "productCount": number;
     /**
      * Indicates if the channel catalog is active
      */
@@ -35,7 +35,7 @@ export interface ChannelCatalog {
     "columnMappings"?: models.ColumnMappingWithNameList;
     "exclusionFilters"?: models.ExclusionFilters;
     "exportUrl"?: models.BeezUPCommonHttpUrl;
-    "status": models.ChannelCatalogStatus;
+    "state": models.ChannelCatalogState;
     /**
      * Indicates the actions you can do on a channel catalog
      */

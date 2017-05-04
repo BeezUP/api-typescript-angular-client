@@ -115,7 +115,7 @@ export * from './ChannelCatalogProductInfo';
 export * from './ChannelCatalogProductInfoLinks';
 export * from './ChannelCatalogProductInfoList';
 export * from './ChannelCatalogProductInfoListLinks';
-export * from './ChannelCatalogStatus';
+export * from './ChannelCatalogState';
 export * from './ChannelCategory';
 export * from './ChannelCategoryChannelCode';
 export * from './ChannelCategoryColumnOverride';
