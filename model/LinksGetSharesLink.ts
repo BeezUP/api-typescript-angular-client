@@ -13,6 +13,7 @@
 import * as models from './models';
 
 export interface LinksGetSharesLink {
+    "docUrl"?: models.BeezUPCommonDocUrl;
     /**
      * The description of the link
      */

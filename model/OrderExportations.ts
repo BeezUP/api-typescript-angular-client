@@ -13,7 +13,7 @@
 import * as models from './models';
 
 /**
- * The list of orders exportation
+ * The list of Order report exportations
  */
 export interface OrderExportations {
     "paginationResult"?: models.BeezUPCommonPaginationResult;

@@ -13,10 +13,15 @@
 import * as models from './models';
 
 /**
- * Indicates the configuration applied on the column (catalog or custom) during the importation process. You have to define the BeezUP Column Name property OR the custom configuration property.
+ * Indicates the configuration applied on the column (catalog or custom) during the importation process.
  */
 export interface ColumnConfiguration {
     "beezUPColumnName"?: models.BeezUPCommonBeezUPColumnName;
-    "customConfiguration"?: models.ColumnCustomConfiguration;
+    "columnImportance": models.BeezUPCommonColumnImportance;
+    "columnDataType": models.BeezUPCommonColumnDataType;
+    "columnCultureName"?: models.ColumnCultureName;
+    "columnFormat"?: models.ColumnFormat;
+    "canBeTruncated"?: models.CanBeTruncated;
+    "displayGroupName"?: models.DisplayGroupName;
 }
 

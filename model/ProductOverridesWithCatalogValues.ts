@@ -13,8 +13,8 @@
 import * as models from './models';
 
 /**
- * The BeezUP Order identifier
+ * The key is the channel column identifier
  */
-export interface BeezUPOrderId {
+export interface ProductOverridesWithCatalogValues extends null<String, models.ProductOverrideWithCatalogValue> {
 }
 

@@ -17,10 +17,7 @@ export interface BeezUPCommonPaginationResult {
      * The entry count currently returned
      */
     "entryCount"?: number;
-    /**
-     * The navigation links 'first', 'last', 'next', 'previous'
-     */
-    "links"?: Array<models.BeezUPCommonLink2>;
+    "links"?: models.BeezUPCommonPaginationResultLinks;
     /**
      * The page count
      */

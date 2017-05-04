@@ -13,8 +13,8 @@
 import * as models from './models';
 
 /**
- * The BeezUP Order identifier
+ * The documentation related to this operation.
  */
-export interface BeezUPOrderId {
+export interface BeezUPCommonDocUrl {
 }
 

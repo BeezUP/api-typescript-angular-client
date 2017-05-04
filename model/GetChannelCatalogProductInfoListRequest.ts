@@ -14,12 +14,32 @@ import * as models from './models';
 
 export interface GetChannelCatalogProductInfoListRequest {
     /**
-     * The product sku to search
+     * Search by product sku. If null the filter will not be taken in account.
      */
     "sku"?: string;
     /**
-     * The  product title to search
+     * Search by product title. If null the filter will not be taken in account.
      */
     "title"?: string;
+    /**
+     * Search overrided products. If null the filter will not be taken in account.
+     */
+    "overrided"?: boolean;
+    /**
+     * Search disabled products. If null the filter will not be taken in account.
+     */
+    "disabled"?: boolean;
+    /**
+     * Search product with category mapped with the channel. If null the filter will not be taken in account.
+     */
+    "categoryMapped"?: boolean;
+    /**
+     * Search excluded products by at least an exclusion filter. If null the filter will not be taken in account.
+     */
+    "excluded"?: boolean;
+    /**
+     * If false, search for product absent from the current catalog. If null the filter will not be taken in account.
+     */
+    "active"?: boolean;
 }
 

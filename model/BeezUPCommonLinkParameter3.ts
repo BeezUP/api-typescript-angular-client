@@ -14,9 +14,9 @@ import * as models from './models';
 
 export interface BeezUPCommonLinkParameter3 {
     /**
-     * The value of the parameter
+     * The value of the parameter. It can be an integer a string or an object.
      */
-    "value"?: string;
+    "value"?: any;
     "required"?: boolean;
     /**
      * * path: if the parameter must be pass in the path uri * header: if the parameter must be passed in http header * query: if the parameter must be passed in querystring * body: if the paramter must be passed in the body 

@@ -13,6 +13,7 @@
 import * as models from './models';
 
 export interface LinksCreateStoreLink {
+    "docUrl"?: models.BeezUPCommonDocUrl;
     /**
      * The description of the link
      */

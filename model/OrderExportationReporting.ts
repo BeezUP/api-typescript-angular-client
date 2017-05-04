@@ -13,7 +13,7 @@
 import * as models from './models';
 
 /**
- * Represent the reporting of the orders exportation.
+ * Represent the reporting of the Order report exportations
  */
 export interface OrderExportationReporting {
     "abortionUtcDate"?: Date;

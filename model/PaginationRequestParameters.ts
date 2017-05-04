@@ -12,9 +12,8 @@
 
 import * as models from './models';
 
-/**
- * The BeezUP Order identifier
- */
-export interface BeezUPOrderId {
+export interface PaginationRequestParameters {
+    "pageSize"?: models.PageSize;
+    "pageNumber"?: models.PageNumber;
 }
 

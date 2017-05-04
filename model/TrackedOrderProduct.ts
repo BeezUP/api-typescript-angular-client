@@ -32,7 +32,7 @@ export interface TrackedOrderProduct {
     /**
      * Indicates if the product still exists in your catalog
      */
-    "productActive": boolean;
+    "productActive"?: boolean;
     /**
      * The product's unit price related to this order
      */

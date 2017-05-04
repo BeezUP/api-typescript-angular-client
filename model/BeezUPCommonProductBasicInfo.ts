@@ -35,6 +35,6 @@ export interface BeezUPCommonProductBasicInfo {
     /**
      * Indicates if the product still exists in your catalog
      */
-    "productActive": boolean;
+    "productActive"?: boolean;
 }
 

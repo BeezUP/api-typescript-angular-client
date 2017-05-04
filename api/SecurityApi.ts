@@ -51,28 +51,6 @@ export class SecurityApi {
         return this.$http(httpRequestParams);
     }
     /**
-        * Log out the current user from go2
-        * Log out the current user from go2
-        */
-    public logout (extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/customer/security/logout';
-
-        let queryParameters: any = {};
-        let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
-        let httpRequestParams: ng.IRequestConfig = {
-            method: 'POST',
-            url: localVarPath,
-                                    params: queryParameters,
-            headers: headerParams
-        };
-
-        if (extraHttpRequestParams) {
-            httpRequestParams = (<any>Object).assign(httpRequestParams, extraHttpRequestParams);
-        }
-
-        return this.$http(httpRequestParams);
-    }
-    /**
         * Lost password
         * Lost password - Your password will be regenerated and sent to your email
         * @param email Your email

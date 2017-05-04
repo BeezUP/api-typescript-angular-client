@@ -12,9 +12,14 @@
 
 import * as models from './models';
 
-/**
- * The BeezUP Order identifier
- */
-export interface BeezUPOrderId {
+export interface ProductOverrideWithCatalogValue {
+    /**
+     * The overrided product value
+     */
+    "override": string;
+    /**
+     * The catalog product value
+     */
+    "catalogValue"?: string;
 }
 

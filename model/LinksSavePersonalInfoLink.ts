@@ -13,6 +13,7 @@
 import * as models from './models';
 
 export interface LinksSavePersonalInfoLink {
+    "docUrl"?: models.BeezUPCommonDocUrl;
     /**
      * The description of the link
      */

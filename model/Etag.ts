@@ -13,7 +13,7 @@
 import * as models from './models';
 
 /**
- * ETag value to identify the order. \\ This information is required for the operation GetOrder and ChangeOrder. \\ For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3 
+ * ETag value to identify the order.\\ This information is required for the operation GetOrder and ChangeOrder.\\ For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3 
  */
 export interface Etag {
 }

@@ -25,6 +25,8 @@ export interface ReportByProductRequest {
     "categoryFilter"?: models.ReportCategoryFilter;
     "indicatorFilters"?: Array<models.ReportIndicatorFilter>;
     "advancedFilters": models.ReportAdvancedFilters;
+    "pageSize"?: models.PageSize;
+    "pageNumber"?: models.PageNumber;
     "productColumnsToDisplay"?: Array<models.BeezUPCommonCatalogColumnId>;
     "productState": models.ProductStateFilter;
     "productFilters"?: models.ProductFilters;

@@ -13,7 +13,7 @@
 import * as models from './models';
 
 /**
- * The technical code of the marketplace.
+ * The technical code of the marketplace
  */
 export interface MarketplaceTechnicalCode {
 }

@@ -32,8 +32,8 @@ export interface ChannelCatalogProductInfo {
     /**
      * Indicates if the product still exists in your catalog
      */
-    "productActive": boolean;
-    "overrides": models.ProductOverrides;
+    "productActive"?: boolean;
+    "overrides": models.ProductOverridesWithCatalogValues;
     /**
      * Indicates if the product has been disabled or not
      */

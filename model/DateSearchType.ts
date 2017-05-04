@@ -13,7 +13,7 @@
 import * as models from './models';
 
 /**
- * Indicates on which date you want to make the filter.
+ * Indicates on which date you want to make the filter
  */
 export interface DateSearchType {
 }

@@ -13,8 +13,12 @@
 import * as models from './models';
 
 /**
- * The BeezUP Order identifier
+ * The navigation links 'first', 'last', 'next', 'previous'
  */
-export interface BeezUPOrderId {
+export interface BeezUPCommonPaginationResultLinks {
+    "first": models.BeezUPCommonLink3;
+    "last": models.BeezUPCommonLink3;
+    "previous"?: models.BeezUPCommonLink3;
+    "next"?: models.BeezUPCommonLink3;
 }
 

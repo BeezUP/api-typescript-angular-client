@@ -25,5 +25,7 @@ export interface ReportByCategoryRequest {
     "categoryFilter"?: models.ReportCategoryFilter;
     "indicatorFilters"?: Array<models.ReportIndicatorFilter>;
     "advancedFilters": models.ReportAdvancedFilters;
+    "pageSize"?: models.PageSize;
+    "pageNumber"?: models.PageNumber;
 }
 

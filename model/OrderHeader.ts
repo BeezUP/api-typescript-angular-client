@@ -32,11 +32,11 @@ export interface OrderHeader {
      */
     "orderPurchaseUtcDate": Date;
     /**
-     * The last modification UTC date done by BeezUP of this order.
+     * The last modification UTC date done by BeezUP of this order
      */
     "orderLastModificationUtcDate": Date;
     /**
-     * The last modification UTC date done by the marketplace on this order.
+     * The last modification UTC date done by the marketplace on this order
      */
     "orderMarketplaceLastModificationUtcDate": Date;
     "orderBuyerName"?: models.OrderBuyerName;

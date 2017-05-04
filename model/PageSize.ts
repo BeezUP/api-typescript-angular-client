@@ -13,7 +13,7 @@
 import * as models from './models';
 
 /**
- * Indicate the order count per page
+ * Indicate the item count per page
  */
 export interface PageSize {
 }
