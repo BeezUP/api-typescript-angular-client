@@ -101,8 +101,6 @@ export * from './ChannelCatalog';
 export * from './ChannelCatalogCategoryMapping';
 export * from './ChannelCatalogCategoryMappingInfo';
 export * from './ChannelCatalogCategoryMappings';
-export * from './ChannelCatalogHeader';
-export * from './ChannelCatalogHeaderLinks';
 export * from './ChannelCatalogList';
 export * from './ChannelCatalogMarketplaceProperties';
 export * from './ChannelCatalogMarketplacePropertiesLinks';

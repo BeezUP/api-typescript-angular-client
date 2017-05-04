@@ -17,6 +17,6 @@ export interface ChannelCatalogList {
      * Indicates how to create a channel catalog and how to get the channel catalog list
      */
     "links"?: Array<models.BeezUPCommonLink2>;
-    "channelCatalogs"?: Array<models.ChannelCatalogHeader>;
+    "channelCatalogs"?: Array<models.ChannelCatalog>;
 }
 
