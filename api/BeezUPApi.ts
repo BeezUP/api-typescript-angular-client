@@ -2665,7 +2665,7 @@ export class BeezUPApi {
         * 
         * @param storeId Your store identifier
         */
-    public getRules (storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.Rulelist> {
+    public getRules (storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.RuleList> {
         const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/rules'
             .replace('{' + 'storeId' + '}', String(storeId));
 
