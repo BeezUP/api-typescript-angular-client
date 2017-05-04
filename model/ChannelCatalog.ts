@@ -17,24 +17,28 @@ export interface ChannelCatalog {
     "channelName": models.BeezUPCommonChannelName;
     "channelImageUrl": models.BeezUPCommonHttpUrl;
     /**
+     * The product count exported considering category mapping. Not all filters have been applied.
+     */
+    "productCount"?: number;
+    /**
      * Indicates if the channel catalog is active
      */
-    "enabled"?: boolean;
+    "enabled": boolean;
     /**
      * Indicates if this channel catalog is related to a marketplace
      */
-    "isMarketplace"?: boolean;
+    "isMarketplace": boolean;
     "channelCatalogId": models.BeezUPCommonChannelCatalogId;
     "storeId": models.BeezUPCommonStoreId;
-    "generalSettings"?: models.GeneralSettings;
-    "costSettings"?: models.CostSettings;
+    "generalSettings": models.GeneralSettings;
+    "costSettings": models.CostSettings;
     "columnMappings"?: models.ColumnMappingWithNameList;
     "exclusionFilters"?: models.ExclusionFilters;
     "exportUrl"?: models.BeezUPCommonHttpUrl;
-    "status"?: models.ChannelCatalogStatus;
+    "status": models.ChannelCatalogStatus;
     /**
      * Indicates the actions you can do on a channel catalog
      */
-    "links"?: Array<models.BeezUPCommonLink2>;
+    "links": Array<models.BeezUPCommonLink2>;
 }
 
