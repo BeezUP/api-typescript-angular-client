@@ -1615,7 +1615,7 @@ export class BeezUPApi {
         * @param format 
         * @param request 
         */
-    public exportStoreReportByCategory (storeId: string, format: string, request: models.ReportByCategoryRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.BeezUPCommonLink2>> {
+    public exportStoreReportByCategory (storeId: string, format: string, request: models.ReportByCategoryRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.BeezUPCommonLink3> {
         const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/reports/bycategory/export'
             .replace('{' + 'storeId' + '}', String(storeId));
 
@@ -1658,7 +1658,7 @@ export class BeezUPApi {
         * @param format 
         * @param request 
         */
-    public exportStoreReportByChannel (storeId: string, format: string, request: models.ReportByChannelRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.BeezUPCommonLink2>> {
+    public exportStoreReportByChannel (storeId: string, format: string, request: models.ReportByChannelRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.BeezUPCommonLink3> {
         const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/reports/bychannel/export'
             .replace('{' + 'storeId' + '}', String(storeId));
 
@@ -1701,7 +1701,7 @@ export class BeezUPApi {
         * @param format 
         * @param request 
         */
-    public exportStoreReportByProduct (storeId: string, format: string, request: models.ReportByProductRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.BeezUPCommonLink2>> {
+    public exportStoreReportByProduct (storeId: string, format: string, request: models.ReportByProductRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.BeezUPCommonLink3> {
         const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/reports/byproduct/export'
             .replace('{' + 'storeId' + '}', String(storeId));
 
@@ -2665,7 +2665,7 @@ export class BeezUPApi {
         * 
         * @param storeId Your store identifier
         */
-    public getRules (storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.Rules> {
+    public getRules (storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.Rulelist> {
         const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/rules'
             .replace('{' + 'storeId' + '}', String(storeId));
 

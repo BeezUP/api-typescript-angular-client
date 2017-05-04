@@ -53,9 +53,6 @@ export interface RuleExecutionReporting {
      * The url for the excel report for this execution
      */
     "reportUrl"?: string;
-    /**
-     * Links to retrieve/action on this rule execution
-     */
-    "links"?: Array<models.BeezUPCommonLink2>;
+    "links"?: models.DefinitionsruleExecutionReportingLinks;
 }
 

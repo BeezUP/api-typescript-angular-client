@@ -21,9 +21,6 @@ export interface ReportFilterHeader {
      * Report filter name
      */
     "reportFilterName": string;
-    /**
-     * The list of action you can do on the filter subject
-     */
-    "links": Array<models.BeezUPCommonLink2>;
+    "links": models.ReportFilterHeaderLinks;
 }
 

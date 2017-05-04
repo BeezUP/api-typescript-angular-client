@@ -12,16 +12,7 @@
 
 import * as models from './models';
 
-export interface ReportFilter {
-    /**
-     * Report filter identifier
-     */
-    "reportFilterId": string;
-    /**
-     * Report filter name
-     */
-    "reportFilterName": string;
-    "parameters": models.ReportFilterParameters;
-    "links"?: models.ReportFilterLinks;
+export interface ReportFilterHeaderLinks {
+    "self"?: models.LinksGetReportFilterLink;
 }
 

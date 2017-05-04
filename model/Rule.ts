@@ -47,9 +47,6 @@ export interface Rule {
      * Rule validity end utc date
      */
     "validityEndUtcDate"?: Date;
-    /**
-     * Links to retrieve/action on other entities
-     */
-    "links": Array<models.BeezUPCommonLink2>;
+    "links": models.DefinitionsruleLinks;
 }
 

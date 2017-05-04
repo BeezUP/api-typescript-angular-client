@@ -12,16 +12,13 @@
 
 import * as models from './models';
 
-export interface ReportFilter {
-    /**
-     * Report filter identifier
-     */
-    "reportFilterId": string;
-    /**
-     * Report filter name
-     */
-    "reportFilterName": string;
-    "parameters": models.ReportFilterParameters;
-    "links"?: models.ReportFilterLinks;
+/**
+ * Links to know if the user can create a rule or run all rules
+ */
+export interface RuleListLinks {
+    "self"?: models.DefinitionslinksGetRulesLink;
+    "create"?: models.DefinitionslinksCreateRuleLink;
+    "history"?: models.DefinitionslinksGetRulesExecutionsLink;
+    "run"?: models.DefinitionslinksRunRulesLink;
 }
 
