@@ -16,6 +16,6 @@ export interface ReportByCategoryResponse {
     "paginationResult"?: models.BeezUPCommonPaginationResult;
     "currencyCode"?: models.BeezUPCommonCurrencyCode;
     "categories"?: Array<models.ReportByCategory>;
-    "links"?: Array<models.BeezUPCommonLink2>;
+    "links"?: models.ReportByCategoryResponseLinks;
 }
 

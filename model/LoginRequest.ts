@@ -13,7 +13,7 @@
 import * as models from './models';
 
 export interface LoginRequest {
-    "login": models.Email;
+    "login": models.BeezUPCommonEmail;
     /**
      * Your password
      */

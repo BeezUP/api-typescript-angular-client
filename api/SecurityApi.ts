@@ -31,11 +31,15 @@ export class SecurityApi {
         * User Login - The login will give your tokens
         * @param request 
         */
-    public login (request?: models.LoginRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ApiCredentials> {
+    public login (request: models.LoginRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ApiCredentials> {
         const localVarPath = this.basePath + '/v2/public/security/login';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling login.');
+        }
         let httpRequestParams: ng.IRequestConfig = {
             method: 'POST',
             url: localVarPath,
@@ -55,11 +59,15 @@ export class SecurityApi {
         * Lost password - Your password will be regenerated and sent to your email
         * @param email Your email
         */
-    public lostPassword (email?: models.Email, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
+    public lostPassword (email: models.BeezUPCommonEmail, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
         const localVarPath = this.basePath + '/v2/public/security/lostpassword';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
+        // verify required parameter 'email' is not null or undefined
+        if (email === null || email === undefined) {
+            throw new Error('Required parameter email was null or undefined when calling lostPassword.');
+        }
         let httpRequestParams: ng.IRequestConfig = {
             method: 'POST',
             url: localVarPath,
@@ -79,11 +87,15 @@ export class SecurityApi {
         * User Registration - Create a new user on BeezUP
         * @param request 
         */
-    public register (request?: models.RegisterRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
+    public register (request: models.RegisterRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
         const localVarPath = this.basePath + '/v2/public/security/register';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling register.');
+        }
         let httpRequestParams: ng.IRequestConfig = {
             method: 'POST',
             url: localVarPath,

@@ -25,6 +25,8 @@ export interface OptimiseRequest {
     "categoryFilter"?: models.ReportCategoryFilter;
     "indicatorFilters"?: Array<models.ReportIndicatorFilter>;
     "advancedFilters": models.ReportAdvancedFilters;
+    "pageSize"?: models.PageSize;
+    "pageNumber"?: models.PageNumber;
     "productState"?: models.ProductStateFilter;
     "productFilters"?: models.ProductFilters;
 }

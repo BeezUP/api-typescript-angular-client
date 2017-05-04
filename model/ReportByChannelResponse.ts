@@ -16,6 +16,6 @@ export interface ReportByChannelResponse {
     "paginationResult": models.BeezUPCommonPaginationResult;
     "currencyCode": models.BeezUPCommonCurrencyCode;
     "channels": Array<models.ReportByChannel>;
-    "links": Array<models.BeezUPCommonLink2>;
+    "links": models.ReportByChannelResponseLinks;
 }
 

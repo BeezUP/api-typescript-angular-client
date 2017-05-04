@@ -12,9 +12,8 @@
 
 import * as models from './models';
 
-export interface ReportByProductResponse {
-    "paginationResult": models.BeezUPCommonPaginationResult;
-    "products": Array<models.ReportByProduct>;
-    "links": models.ReportByProductResponseLinks;
+export interface ReportByCommonResponseLinks {
+    "enableAllProducts"?: models.LinksOptimiseLink;
+    "disableAllProducts"?: models.LinksOptimiseLink;
 }
 
