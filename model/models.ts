@@ -266,6 +266,7 @@ export * from './LinksSaveCompanyInfoLink';
 export * from './LinksSaveCreditCardInfoLink';
 export * from './LinksSavePersonalInfoLink';
 export * from './LinksSaveProfilePictureInfoLink';
+export * from './LinksSaveReportFilterLink';
 export * from './LinksSaveStoreAlertLink';
 export * from './LinksSetChannelCatalogMarketplaceSettingsLink';
 export * from './LinksShareLink';

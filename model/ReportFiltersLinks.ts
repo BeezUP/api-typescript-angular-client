@@ -14,5 +14,6 @@ import * as models from './models';
 
 export interface ReportFiltersLinks {
     "self"?: models.LinksGetReportFiltersLink;
+    "save"?: models.LinksSaveReportFilterLink;
 }
 

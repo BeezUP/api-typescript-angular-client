@@ -14,6 +14,6 @@ import * as models from './models';
 
 export interface ReportFilters {
     "reportFilters"?: Array<models.ReportFilterHeader>;
-    "links"?: Array<models.BeezUPCommonLink2>;
+    "links"?: models.ReportFiltersLinks;
 }
 
