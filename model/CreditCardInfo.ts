@@ -14,7 +14,7 @@ import * as models from './models';
 
 export interface CreditCardInfo {
     "cardNumber": models.CardNumber;
-    "cardVerificationCode"?: models.CardVerificationCode;
+    "cardVerificationCode": models.CardVerificationCode;
     "expirationMonth": models.ExpirationMonth;
     "expirationYear": models.ExpirationYear;
 }
