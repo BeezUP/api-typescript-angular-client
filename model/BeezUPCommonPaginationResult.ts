@@ -17,7 +17,6 @@ export interface BeezUPCommonPaginationResult {
      * The entry count currently returned
      */
     "entryCount"?: number;
-    "links"?: models.BeezUPCommonPaginationResultLinks;
     /**
      * The page count
      */
@@ -26,5 +25,6 @@ export interface BeezUPCommonPaginationResult {
      * The total entry count
      */
     "totalEntryCount"?: number;
+    "links"?: models.BeezUPCommonPaginationResultLinks;
 }
 

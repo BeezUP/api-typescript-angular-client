@@ -13,10 +13,7 @@
 import * as models from './models';
 
 export interface BeezUPCommonUserErrorMessage {
-    /**
-     * The documentation related to this operation.
-     */
-    "docUrl"?: string;
+    "docUrl"?: models.BeezUPCommonDocUrl;
     /**
      * the error code. The error code can be a pattern containing the argument's name
      */
