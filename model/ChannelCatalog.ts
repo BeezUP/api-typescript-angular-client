@@ -12,10 +12,10 @@
 
 import * as models from './models';
 
-/**
- * The channel catalog
- */
 export interface ChannelCatalog {
+    "channelId": models.BeezUPCommonChannelId;
+    "channelName": models.BeezUPCommonChannelName;
+    "channelImageUrl": models.BeezUPCommonHttpUrl;
     /**
      * Indicates if the channel catalog is active
      */
@@ -25,8 +25,6 @@ export interface ChannelCatalog {
      */
     "isMarketplace"?: boolean;
     "channelCatalogId": models.BeezUPCommonChannelCatalogId;
-    "channelId": models.BeezUPCommonChannelId;
-    "channelName"?: models.BeezUPCommonChannelName;
     "storeId": models.BeezUPCommonStoreId;
     "generalSettings"?: models.GeneralSettings;
     "costSettings"?: models.CostSettings;
