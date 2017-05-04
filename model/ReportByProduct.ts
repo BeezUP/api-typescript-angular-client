@@ -46,9 +46,6 @@ export interface ReportByProduct {
      * The performance indicator based on the performance indicator formula indicated in the request for this product
      */
     "performanceIndicator": number;
-    /**
-     * The action list on this product
-     */
-    "links": Array<models.BeezUPCommonLink2>;
+    "links": models.ReportByProductLinks;
 }
 

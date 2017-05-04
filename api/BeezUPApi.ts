@@ -2949,7 +2949,7 @@ export class BeezUPApi {
         * @param format 
         * @param request 
         */
-    public getStoreReportByDayExport (storeId: string, format: string, request: models.ReportByDayRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.BeezUPCommonLink2>> {
+    public getStoreReportByDayExport (storeId: string, format: string, request: models.ReportByDayRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.BeezUPCommonLink3> {
         const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/reports/byday/export'
             .replace('{' + 'storeId' + '}', String(storeId));
 

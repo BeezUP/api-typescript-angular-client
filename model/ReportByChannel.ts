@@ -46,9 +46,6 @@ export interface ReportByChannel {
      * The performance indicator based on the performance indicator formula indicated in the request for this channel
      */
     "performanceIndicator": number;
-    /**
-     * The action list on this channel
-     */
-    "links"?: Array<models.BeezUPCommonLink2>;
+    "links"?: models.ReportByChannelLinks;
 }
 

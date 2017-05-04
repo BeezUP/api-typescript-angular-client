@@ -47,9 +47,6 @@ export interface ReportByCategory {
      * The performance indicator based on the performance indicator formula indicated in the request for this category
      */
     "performanceIndicator": number;
-    /**
-     * The action list on this catagory
-     */
-    "links"?: Array<models.BeezUPCommonLink2>;
+    "links"?: models.ReportByCategoryLinks;
 }
 
