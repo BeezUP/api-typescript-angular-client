@@ -20,5 +20,6 @@ export interface StoreHeaderLinks {
     "deleteStore"?: models.LinksDeleteStoreLink;
     "updateStore"?: models.LinksUpdateStoreLink;
     "getShares"?: models.LinksGetSharesLink;
+    "share"?: models.LinksShareLink;
 }
 
