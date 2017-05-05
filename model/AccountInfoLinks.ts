@@ -19,6 +19,7 @@ export interface AccountInfoLinks {
     "savePersonalInfo"?: models.LinksSavePersonalInfoLink;
     "changePassword"?: models.LinksChangePasswordLink;
     "saveCompanyInfo"?: models.LinksSaveCompanyInfoLink;
+    "getProfilePictureInfo"?: models.LinksGetProfilePictureInfoLink;
     "saveProfilePictureInfo"?: models.LinksSaveProfilePictureInfoLink;
     "getCreditCardInfo"?: models.LinksGetCreditCardInfoLink;
     "saveUserCreditCardLink"?: models.LinksSaveCreditCardInfoLink;

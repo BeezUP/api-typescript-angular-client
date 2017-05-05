@@ -2482,6 +2482,28 @@ export class BeezUPApi {
         return this.$http(httpRequestParams);
     }
     /**
+        * Get profile picture information
+        * 
+        */
+    public getProfilePictureInfo (extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ProfilePictureInfoResponse> {
+        const localVarPath = this.basePath + '/v2/user/customer/account/profilePictureInfo';
+
+        let queryParameters: any = {};
+        let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
+        let httpRequestParams: ng.IRequestConfig = {
+            method: 'GET',
+            url: localVarPath,
+                                    params: queryParameters,
+            headers: headerParams
+        };
+
+        if (extraHttpRequestParams) {
+            httpRequestParams = (<any>Object).assign(httpRequestParams, extraHttpRequestParams);
+        }
+
+        return this.$http(httpRequestParams);
+    }
+    /**
         * Fetch the publication history for an account, sorted by descending start date
         * 
         * @param marketplaceTechnicalCode Marketplace Technical Code to query (required)
