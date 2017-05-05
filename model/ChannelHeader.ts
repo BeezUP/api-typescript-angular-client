@@ -23,6 +23,10 @@ export interface ChannelHeader {
      * Indicates if we have more detailed information about this channel
      */
     "descriptionAvailable": boolean;
+    /**
+     * Indicates if the channel is a marketplace
+     */
+    "isMarketplace": boolean;
     "links": models.ChannelHeaderLinks;
 }
 
