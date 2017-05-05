@@ -12,8 +12,9 @@
 
 import * as models from './models';
 
-export interface ProfilePictureInfo {
-    "profilePictureUrl"?: models.ProfilePictureUrl;
-    "profilePictureSelected": models.ProfilePictureSelected;
+/**
+ * Your profile picture choice about usage of gravatar picture, initials picture or uploaded picture.
+ */
+export interface ProfilePictureSelected {
 }
 
