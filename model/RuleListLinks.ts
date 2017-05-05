@@ -16,9 +16,9 @@ import * as models from './models';
  * Links to know if the user can create a rule or run all rules
  */
 export interface RuleListLinks {
-    "self"?: models.DefinitionslinksGetRulesLink;
-    "create"?: models.DefinitionslinksCreateRuleLink;
-    "history"?: models.DefinitionslinksGetRulesExecutionsLink;
-    "run"?: models.DefinitionslinksRunRulesLink;
+    "self"?: models.LinksGetRulesLink;
+    "create"?: models.LinksCreateRuleLink;
+    "history"?: models.LinksGetRulesExecutionsLink;
+    "run"?: models.LinksRunRulesLink;
 }
 
