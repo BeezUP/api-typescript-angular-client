@@ -13,16 +13,9 @@
 import * as models from './models';
 
 /**
- * The available channel
+ * The links related to an available channel
  */
-export interface ChannelHeader {
-    "channelId": models.BeezUPCommonChannelId;
-    "channelName": models.BeezUPCommonChannelName;
-    "channelLogoUrl": models.BeezUPCommonHttpUrl;
-    /**
-     * Indicates if we have more detailed information about this channel
-     */
-    "descriptionAvailable": boolean;
-    "links": models.ChannelHeaderLinks;
+export interface ChannelHeaderLinks {
+    "self": models.BeezUPCommonLink2;
 }
 
