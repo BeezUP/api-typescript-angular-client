@@ -12,8 +12,9 @@
 
 import * as models from './models';
 
-export interface ProfilePictureInfoResponse {
-    "profilePictureInfo": models.ProfilePictureInfoWithDefault;
-    "links": models.ProfilePictureInfoResponseLinks;
+/**
+ * Indicate the default url of your picture profil
+ */
+export interface DefaultProfilePictureUrl {
 }
 

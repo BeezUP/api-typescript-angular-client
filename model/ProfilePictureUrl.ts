@@ -13,7 +13,7 @@
 import * as models from './models';
 
 /**
- * Can be null if you choose to use gravatar picture profil, if not you must indicate the url of your picture profil.
+ * Indicate the url of your picture profil
  */
 export interface ProfilePictureUrl {
 }

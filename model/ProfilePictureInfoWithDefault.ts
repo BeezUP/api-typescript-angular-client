@@ -15,6 +15,6 @@ import * as models from './models';
 export interface ProfilePictureInfoWithDefault {
     "profilePictureUrl"?: models.ProfilePictureUrl;
     "useGravatarProfilePicture": models.UseGravatarProfilePicture;
-    "defaultPictureUrl": models.ProfilePictureUrl;
+    "defaultProfilePictureUrl": models.DefaultProfilePictureUrl;
 }
 

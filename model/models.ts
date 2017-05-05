@@ -187,6 +187,7 @@ export * from './CurrentContractInfoLinks';
 export * from './CustomColumn';
 export * from './CustomColumns';
 export * from './DateSearchType';
+export * from './DefaultProfilePictureUrl';
 export * from './DetectedCatalogColumn';
 export * from './DetectedCatalogColumns';
 export * from './DisplayGroupName';
