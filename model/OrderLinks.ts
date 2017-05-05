@@ -14,5 +14,6 @@ import * as models from './models';
 
 export interface OrderLinks {
     "self": models.DefinitionslinksGetOrderLink;
+    "history"?: models.DefinitionslinksGetOrderHistoryLink;
 }
 
