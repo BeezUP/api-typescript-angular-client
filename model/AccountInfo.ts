@@ -13,13 +13,13 @@
 import * as models from './models';
 
 export interface AccountInfo {
+    "userId": models.BeezUPCommonUserId;
+    "email": models.BeezUPCommonEmail;
+    "personalInfo": models.PersonalInfo;
+    "status": models.AccountStatus;
+    "companyInfo": models.CompanyInfo;
+    "profilePictureUrl": models.ProfilePictureUrl;
+    "links": models.AccountInfoLinks;
     "info"?: models.BeezUPCommonInfoSummaries;
-    "links"?: models.AccountInfoLinks;
-    "userId"?: models.BeezUPCommonUserId;
-    "email"?: models.BeezUPCommonEmail;
-    "personalInfo"?: models.PersonalInfo;
-    "status"?: models.AccountStatus;
-    "companyInfo"?: models.CompanyInfo;
-    "profilePictureInfo"?: models.ProfilePictureInfo;
 }
 
