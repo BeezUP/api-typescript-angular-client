@@ -19,6 +19,10 @@ export interface ChannelHeader {
     "channelId": models.BeezUPCommonChannelId;
     "channelName": models.BeezUPCommonChannelName;
     "channelLogoUrl": models.BeezUPCommonHttpUrl;
-    "links": models.AvailableChannelLink;
+    /**
+     * Indicates if we have more detailed information about this channel
+     */
+    "descriptionAvailable": boolean;
+    "links": models.ChannelHeaderLinks;
 }
 
