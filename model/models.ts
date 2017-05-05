@@ -322,6 +322,7 @@ export * from './OrderHistory';
 export * from './OrderIdentifier';
 export * from './OrderIdentifierWithETag';
 export * from './OrderItem';
+export * from './OrderLinks';
 export * from './OrderListFull';
 export * from './OrderListLight';
 export * from './OrderListRequest';

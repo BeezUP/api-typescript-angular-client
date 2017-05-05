@@ -44,7 +44,7 @@ export interface Order {
     "orderCurrencyCode"?: models.BeezUPCommonCurrencyCode;
     "processing": models.Processing;
     "etag": models.Etag;
-    "links": models.DefinitionsorderHeaderLinks;
+    "links": models.OrderLinks;
     /**
      * Useful to identify the origin of the order. For example in Amazon.
      */
