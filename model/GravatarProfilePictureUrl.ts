@@ -12,10 +12,9 @@
 
 import * as models from './models';
 
-export interface ProfilePictureInfoWithDefault {
-    "profilePictureUrl"?: models.ProfilePictureUrl;
-    "useGravatarProfilePicture": models.UseGravatarProfilePicture;
-    "initialsProfilePictureUrl": models.InitialsProfilePictureUrl;
-    "gravatarProfilePictureUrl": models.GravatarProfilePictureUrl;
+/**
+ * Indicate the url of your picture profil based on gravatar
+ */
+export interface GravatarProfilePictureUrl {
 }
 
