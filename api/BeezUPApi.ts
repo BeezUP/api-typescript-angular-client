@@ -1760,6 +1760,37 @@ export class BeezUPApi {
         return this.$http(httpRequestParams);
     }
     /**
+        * List all available channel for this store
+        * 
+        * @param storeId The store identifier
+        */
+    public getAvailableChannels (storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.ChannelHeader>> {
+        const localVarPath = this.basePath + '/v2/user/channels/';
+
+        let queryParameters: any = {};
+        let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
+        // verify required parameter 'storeId' is not null or undefined
+        if (storeId === null || storeId === undefined) {
+            throw new Error('Required parameter storeId was null or undefined when calling getAvailableChannels.');
+        }
+        if (storeId !== undefined) {
+            queryParameters['storeId'] = storeId;
+        }
+
+        let httpRequestParams: ng.IRequestConfig = {
+            method: 'GET',
+            url: localVarPath,
+                                    params: queryParameters,
+            headers: headerParams
+        };
+
+        if (extraHttpRequestParams) {
+            httpRequestParams = (<any>Object).assign(httpRequestParams, extraHttpRequestParams);
+        }
+
+        return this.$http(httpRequestParams);
+    }
+    /**
         * Get billing periods conditions
         * 
         */
@@ -2137,37 +2168,6 @@ export class BeezUPApi {
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
-        let httpRequestParams: ng.IRequestConfig = {
-            method: 'GET',
-            url: localVarPath,
-                                    params: queryParameters,
-            headers: headerParams
-        };
-
-        if (extraHttpRequestParams) {
-            httpRequestParams = (<any>Object).assign(httpRequestParams, extraHttpRequestParams);
-        }
-
-        return this.$http(httpRequestParams);
-    }
-    /**
-        * List all available channel for this store
-        * 
-        * @param storeId The store identifier
-        */
-    public getCurrentChannels (storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.ChannelHeader>> {
-        const localVarPath = this.basePath + '/v2/user/channels/';
-
-        let queryParameters: any = {};
-        let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
-        // verify required parameter 'storeId' is not null or undefined
-        if (storeId === null || storeId === undefined) {
-            throw new Error('Required parameter storeId was null or undefined when calling getCurrentChannels.');
-        }
-        if (storeId !== undefined) {
-            queryParameters['storeId'] = storeId;
-        }
-
         let httpRequestParams: ng.IRequestConfig = {
             method: 'GET',
             url: localVarPath,

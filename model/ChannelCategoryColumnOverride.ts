@@ -14,7 +14,7 @@ import * as models from './models';
 
 export interface ChannelCategoryColumnOverride {
     "channelColumnId": models.BeezUPCommonChannelColumnId;
-    "channelColumnName": models.BeezUPCommonChannelColumnName;
+    "channelColumnName": models.ChannelColumnName;
     "channelColumnDescription"?: models.ChannelColumnDescription;
     "showInMapping": models.ChannelColumnShowInMapping;
     "configuration": models.ChannelColumnConfiguration;

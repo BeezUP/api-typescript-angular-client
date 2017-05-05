@@ -13,12 +13,8 @@
 import * as models from './models';
 
 /**
- * The available channel
+ * The channel column name
  */
-export interface ChannelHeader {
-    "channelId": models.BeezUPCommonChannelId;
-    "channelName": models.BeezUPCommonChannelName;
-    "channelLogoUrl": models.BeezUPCommonHttpUrl;
-    "links": models.AvailableChannelLink;
+export interface ChannelColumnName {
 }
 

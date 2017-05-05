@@ -17,7 +17,7 @@ import * as models from './models';
  */
 export interface ChannelColumn {
     "channelColumnId": models.BeezUPCommonChannelColumnId;
-    "channelColumnName": models.BeezUPCommonChannelColumnName;
+    "channelColumnName": models.ChannelColumnName;
     "channelColumnDescription"?: models.ChannelColumnDescription;
     "showInMapping": models.ChannelColumnShowInMapping;
     /**
