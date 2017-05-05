@@ -132,6 +132,7 @@ export * from './ChannelHeaderLinks';
 export * from './ChannelInfo';
 export * from './ChannelInfoDetails';
 export * from './ChannelInfoKeyNumbers';
+export * from './ChannelInfoList';
 export * from './ChannelInfoSalesContact';
 export * from './ChannelInfoTechnicalContact';
 export * from './ChannelRootCategory';
