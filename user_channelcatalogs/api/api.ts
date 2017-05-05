@@ -1,0 +1,17 @@
+export * from './ChannelCatalogsCategoryMappingsApi';
+import { ChannelCatalogsCategoryMappingsApi }  from './ChannelCatalogsCategoryMappingsApi';
+export * from './ChannelCatalogsColumnMappingsApi';
+import { ChannelCatalogsColumnMappingsApi }  from './ChannelCatalogsColumnMappingsApi';
+export * from './ChannelCatalogsExclusionFiltersApi';
+import { ChannelCatalogsExclusionFiltersApi }  from './ChannelCatalogsExclusionFiltersApi';
+export * from './ChannelCatalogsGlobalApi';
+import { ChannelCatalogsGlobalApi }  from './ChannelCatalogsGlobalApi';
+export * from './ChannelCatalogsProductsApi';
+import { ChannelCatalogsProductsApi }  from './ChannelCatalogsProductsApi';
+export * from './ChannelCatalogsProductsOptimisationApi';
+import { ChannelCatalogsProductsOptimisationApi }  from './ChannelCatalogsProductsOptimisationApi';
+export * from './ChannelCatalogsProductsOverridesApi';
+import { ChannelCatalogsProductsOverridesApi }  from './ChannelCatalogsProductsOverridesApi';
+export * from './ChannelCatalogsSettingsApi';
+import { ChannelCatalogsSettingsApi }  from './ChannelCatalogsSettingsApi';
+export const APIS = [ ChannelCatalogsCategoryMappingsApi, ChannelCatalogsColumnMappingsApi, ChannelCatalogsExclusionFiltersApi, ChannelCatalogsGlobalApi, ChannelCatalogsProductsApi, ChannelCatalogsProductsOptimisationApi, ChannelCatalogsProductsOverridesApi, ChannelCatalogsSettingsApi, ];
