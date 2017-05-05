@@ -12,13 +12,7 @@
 
 import * as models from './models';
 
-/**
- * Channel Catalog Status
- */
-export interface ChannelCatalogStatus {
-    "exportedProductCount": number;
-    "columnMappingStatus": models.ColumnMappingStatus;
-    "categoryMappingStatus": models.CategoryMappingStatus;
-    "apiSettingStatus": models.ApiSettingStatus;
+export interface OrderHeaderLinks {
+    "self": models.DefinitionslinksGetOrderLink;
 }
 

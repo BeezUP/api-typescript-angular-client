@@ -47,6 +47,6 @@ export interface OrderHeader {
     "orderCurrencyCode"?: models.BeezUPCommonCurrencyCode;
     "processing": models.Processing;
     "etag": models.Etag;
-    "links": Array<models.BeezUPCommonLink2>;
+    "links": models.DefinitionsorderHeaderLinks;
 }
 

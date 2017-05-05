@@ -26,7 +26,7 @@ export interface UserFriendInfo {
      */
     "firstName": string;
     "email": models.FriendEmail;
-    "profilePictureUrl": models.FriendProfilePictureUrl;
+    "profilePictureUrl"?: models.FriendProfilePictureUrl;
     "countryIsoCodeAlpha3": models.FriendCountryIsoCodeAlpha3;
     /**
      * Your friend's user company name

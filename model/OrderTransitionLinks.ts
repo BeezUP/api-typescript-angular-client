@@ -13,12 +13,8 @@
 import * as models from './models';
 
 /**
- * Channel Catalog Status
+ * Contains the authorized change actions for an order
  */
-export interface ChannelCatalogStatus {
-    "exportedProductCount": number;
-    "columnMappingStatus": models.ColumnMappingStatus;
-    "categoryMappingStatus": models.CategoryMappingStatus;
-    "apiSettingStatus": models.ApiSettingStatus;
+export interface OrderTransitionLinks extends null<String, models.LinksChangeOrderLink> {
 }
 
