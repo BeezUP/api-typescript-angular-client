@@ -16,7 +16,7 @@ import * as models from './models';
  * The list of Order report exportations
  */
 export interface OrderExportations {
-    "paginationResult"?: models.BeezUPCommonPaginationResult;
-    "exportations"?: Array<models.OrderExportationReporting>;
+    "paginationResult": models.BeezUPCommonPaginationResult;
+    "exportations": Array<models.OrderExportationReporting>;
 }
 

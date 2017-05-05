@@ -12,6 +12,9 @@
 
 import * as models from './models';
 
+/**
+ * The message request to export order list. The store identifier is requested to regroup the exportations.
+ */
 export interface ExportOrderListRequest {
     "storeId": models.BeezUPCommonStoreId;
     "orderListRequest": models.OrderListRequest;
