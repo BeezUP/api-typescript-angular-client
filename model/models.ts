@@ -357,6 +357,7 @@ export * from './Products';
 export * from './ProfilePictureInfo';
 export * from './ProfilePictureInfoResponse';
 export * from './ProfilePictureInfoResponseLinks';
+export * from './ProfilePictureInfoWithDefault';
 export * from './ProfilePictureUrl';
 export * from './PromotionalCodeValidity';
 export * from './PublicationFeedReporting';

@@ -13,7 +13,7 @@
 import * as models from './models';
 
 export interface ProfilePictureInfoResponseLinks {
-    "self"?: models.LinksGetProfilePictureInfoLink;
-    "save"?: models.LinksSaveProfilePictureInfoLink;
+    "self": models.LinksGetProfilePictureInfoLink;
+    "save": models.LinksSaveProfilePictureInfoLink;
 }
 
