@@ -13,6 +13,7 @@
 import * as models from './models';
 
 export interface ExportOrderListRequest {
+    "storeId": models.BeezUPCommonStoreId;
     "orderListRequest": models.OrderListRequest;
 }
 

@@ -2351,8 +2351,9 @@ export class BeezUPApi {
         * 
         * @param pageNumber The page number you want to get
         * @param pageSize The count of Order report exportations you want to get
+        * @param storeId The store identifier to regroup the order exportations
         */
-    public getOrderExportations (pageNumber: number, pageSize: number, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.OrderExportations> {
+    public getOrderExportations (pageNumber: number, pageSize: number, storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.OrderExportations> {
         const localVarPath = this.basePath + '/v2/user/marketplaces/orders/exportations';
 
         let queryParameters: any = {};
@@ -2365,12 +2366,20 @@ export class BeezUPApi {
         if (pageSize === null || pageSize === undefined) {
             throw new Error('Required parameter pageSize was null or undefined when calling getOrderExportations.');
         }
+        // verify required parameter 'storeId' is not null or undefined
+        if (storeId === null || storeId === undefined) {
+            throw new Error('Required parameter storeId was null or undefined when calling getOrderExportations.');
+        }
         if (pageNumber !== undefined) {
             queryParameters['pageNumber'] = pageNumber;
         }
 
         if (pageSize !== undefined) {
             queryParameters['pageSize'] = pageSize;
+        }
+
+        if (storeId !== undefined) {
+            queryParameters['storeId'] = storeId;
         }
 
         let httpRequestParams: ng.IRequestConfig = {
