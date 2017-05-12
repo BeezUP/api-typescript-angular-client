@@ -114,7 +114,7 @@ export interface Order {
      */
     "orderShippingAddressCountryName"?: string;
     /**
-     * The shipping address country iso code alpha 2 (see http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Decoding_table for more details)
+     * The shipping address country iso code alpha 2 (see http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#/decoding_table for more details)
      */
     "orderShippingAddressCountryIsoCodeAlpha2"?: string;
     /**
@@ -190,7 +190,7 @@ export interface Order {
      */
     "orderBuyerAddressCountryName"?: string;
     /**
-     * The Buyer address country iso code alpha 2 (see http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Decoding_table for more details)
+     * The Buyer address country iso code alpha 2 (see http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#/decoding_table for more details)
      */
     "orderBuyerAddressCountryIsoCodeAlpha2"?: string;
     /**
