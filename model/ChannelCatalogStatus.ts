@@ -18,7 +18,7 @@ import * as models from './models';
 export interface ChannelCatalogStatus {
     "exportedProductCount": number;
     "columnMappingStatus": models.ColumnMappingStatus;
-    "categoryMappingState"?: models.CategoryMappingState;
+    "categoryMappingStatus": models.CategoryMappingStatus;
     "apiSettingStatus": models.ApiSettingStatus;
 }
 
