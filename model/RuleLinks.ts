@@ -16,14 +16,14 @@ import * as models from './models';
  * Links to retrieve/action on other entities
  */
 export interface RuleLinks {
-    "self"?: models.LinksGetRuleLink;
-    "run"?: models.LinksRunRuleLink;
-    "delete"?: models.LinksDeleteRuleLink;
-    "moveup"?: models.LinksMoveUpRuleLink;
-    "movedown"?: models.LinksMoveDownRuleLink;
-    "enable"?: models.LinksEnableRuleLink;
-    "disable"?: models.LinksDisableRuleLink;
-    "update"?: models.LinksUpdateRuleLink;
-    "reportFilter"?: models.LinksGetReportFilterLink;
+    "self"?: models.DefinitionslinksGetRuleLink;
+    "run"?: models.DefinitionslinksRunRuleLink;
+    "delete"?: models.DefinitionslinksDeleteRuleLink;
+    "moveup"?: models.DefinitionslinksMoveUpRuleLink;
+    "movedown"?: models.DefinitionslinksMoveDownRuleLink;
+    "enable"?: models.DefinitionslinksEnableRuleLink;
+    "disable"?: models.DefinitionslinksDisableRuleLink;
+    "update"?: models.DefinitionslinksUpdateRuleLink;
+    "reportFilter"?: models.DefinitionslinksGetReportFilterLink;
 }
 

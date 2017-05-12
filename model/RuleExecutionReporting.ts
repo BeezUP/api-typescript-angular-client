@@ -53,6 +53,6 @@ export interface RuleExecutionReporting {
      * The url for the excel report for this execution
      */
     "reportUrl"?: string;
-    "links"?: models.RuleExecutionReportingLinks;
+    "links"?: models.DefinitionsruleExecutionReportingLinks;
 }
 

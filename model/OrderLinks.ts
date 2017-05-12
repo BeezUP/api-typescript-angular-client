@@ -13,7 +13,7 @@
 import * as models from './models';
 
 export interface OrderLinks {
-    "self": models.LinksGetOrderLink;
-    "history"?: models.LinksGetOrderHistoryLink;
+    "self": models.DefinitionslinksGetOrderLink;
+    "history"?: models.DefinitionslinksGetOrderHistoryLink;
 }
 
