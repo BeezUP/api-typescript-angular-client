@@ -16,6 +16,6 @@ import * as models from './models';
  * Links to retrieve/action on this rule execution
  */
 export interface RuleExecutionReportingLinks {
-    "rule"?: models.LinksGetRuleLink;
+    "rule"?: models.DefinitionslinksGetRuleLink;
 }
 

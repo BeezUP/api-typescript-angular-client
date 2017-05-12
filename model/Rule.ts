@@ -47,6 +47,6 @@ export interface Rule {
      * Rule validity end utc date
      */
     "validityEndUtcDate"?: Date;
-    "links": models.RuleLinks;
+    "links": models.DefinitionsruleLinks;
 }
 
