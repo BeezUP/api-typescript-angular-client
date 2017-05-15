@@ -1,6 +1,6 @@
 /**
  * BeezUP API
- * This is the RESTful API of BeezUP which allows you to manage everything related to BeezUP
+ * This API will allow you to create your account and to get your tokens. \\ If you lost your password, you have an operation to get it back. 
  *
  * OpenAPI spec version: 2.0
  * Contact: support@beezup.com
@@ -15,7 +15,7 @@ import * as models from '../model/models';
 /* tslint:disable:no-unused-variable member-ordering */
 
 export class BeezUPApi {
-    protected basePath = 'https://api.beezup.comv2';
+    protected basePath = 'https://api.beezup.com/v2';
     public defaultHeaders : any = {};
 
     static $inject: string[] = ['$http', '$httpParamSerializer', 'basePath'];
@@ -32,7 +32,7 @@ export class BeezUPApi {
         * @param emailActivationId The email activation id received by email.
         */
     public activateUserAccount (emailActivationId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/customer/account/activate';
+        const localVarPath = this.basePath + '/user/customer/account/activate';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -61,7 +61,7 @@ export class BeezUPApi {
         * @param request 
         */
     public autoConfigureAutoImportInterval (storeId: string, request: models.ConfigureAutoImportIntervalRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/autoImport/scheduling/interval'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/autoImport/scheduling/interval'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -94,7 +94,7 @@ export class BeezUPApi {
         * @param storeId Your store identifier
         */
     public autoDeleteAutoImport (storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/autoImport'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/autoImport'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -122,7 +122,7 @@ export class BeezUPApi {
         * @param storeId Your store identifier
         */
     public autoGetAutoImportConfiguration (storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.AutoImportConfiguration> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/autoImport'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/autoImport'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -150,7 +150,7 @@ export class BeezUPApi {
         * @param storeId Your store identifier
         */
     public autoPauseAutoImport (storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/autoImport/pause'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/autoImport/pause'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -178,7 +178,7 @@ export class BeezUPApi {
         * @param storeId Your store identifier
         */
     public autoResumeAutoImport (storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/autoImport/resume'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/autoImport/resume'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -207,7 +207,7 @@ export class BeezUPApi {
         * @param request 
         */
     public autoScheduleAutoImport (storeId: string, request: models.ScheduleAutoImportRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/autoImport/scheduling/schedules'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/autoImport/scheduling/schedules'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -239,8 +239,8 @@ export class BeezUPApi {
         * 
         * @param storeId Your store identifier
         */
-    public autoStartAutoImport (storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.BeezUPCommonLink2>> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/autoImport/start'
+    public autoStartAutoImport (storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.LinksImportationGetImportationMonitoringLink> {
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/autoImport/start'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -270,7 +270,7 @@ export class BeezUPApi {
         * @param request 
         */
     public catalogChangeCatalogColumnUserName (storeId: string, columnId: string, request: models.ChangeUserColumnNameRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/catalogColumns/{columnId}/rename'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/catalogColumns/{columnId}/rename'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'columnId' + '}', String(columnId));
 
@@ -310,7 +310,7 @@ export class BeezUPApi {
         * @param request 
         */
     public catalogChangeCustomColumnExpression (storeId: string, columnId: string, request: models.ChangeCustomColumnExpressionRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/customColumns/{columnId}/expression'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/customColumns/{columnId}/expression'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'columnId' + '}', String(columnId));
 
@@ -350,7 +350,7 @@ export class BeezUPApi {
         * @param request 
         */
     public catalogChangeCustomColumnUserName (storeId: string, columnId: string, request: models.ChangeUserColumnNameRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/customColumns/{columnId}/rename'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/customColumns/{columnId}/rename'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'columnId' + '}', String(columnId));
 
@@ -389,7 +389,7 @@ export class BeezUPApi {
         * @param request 
         */
     public catalogComputeExpression (storeId: string, request: models.ComputeExpressionRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<string> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/customColumns/computeExpression'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/customColumns/computeExpression'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -423,7 +423,7 @@ export class BeezUPApi {
         * @param columnId The custom column identifier
         */
     public catalogDeleteCustomColumn (storeId: string, columnId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/customColumns/{columnId}'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/customColumns/{columnId}'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'columnId' + '}', String(columnId));
 
@@ -455,7 +455,7 @@ export class BeezUPApi {
         * Get the BeezUP columns, this columns are used for mapping during the manual catalog importation process.
         */
     public catalogGetBeezUPColumns (extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.BeezUPColumnConfiguration>> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/beezupColumns';
+        const localVarPath = this.basePath + '/user/catalogs/beezupColumns';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -478,7 +478,7 @@ export class BeezUPApi {
         * @param storeId Your store identifier
         */
     public catalogGetCatalogColumns (storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.CatalogColumns> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/catalogColumns'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/catalogColumns'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -507,7 +507,7 @@ export class BeezUPApi {
         * @param acceptEncoding Indicates that the client accepts that the response will be compressed to reduce traffic size.
         */
     public catalogGetCategories (storeId: string, acceptEncoding: Array<string>, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.Categories> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/categories'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/categories'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -542,7 +542,7 @@ export class BeezUPApi {
         * @param columnId The custom column identifier
         */
     public catalogGetCustomColumnExpression (storeId: string, columnId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<string> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/customColumns/{columnId}/expression'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/customColumns/{columnId}/expression'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'columnId' + '}', String(columnId));
 
@@ -575,7 +575,7 @@ export class BeezUPApi {
         * @param storeId Your store identifier
         */
     public catalogGetCustomColumns (storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.CustomColumns> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/customColumns'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/customColumns'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -604,7 +604,7 @@ export class BeezUPApi {
         * @param productId The product identifier you want to get
         */
     public catalogGetProduct (storeId: string, productId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.Product> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/products/{productId}'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/products/{productId}'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'productId' + '}', String(productId));
 
@@ -638,7 +638,7 @@ export class BeezUPApi {
         * @param request 
         */
     public catalogGetProducts (storeId: string, request?: models.GetProductsRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.Products> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/products'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/products'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -668,7 +668,7 @@ export class BeezUPApi {
         * @param count The count of random product you want to get
         */
     public catalogGetRandomProducts (storeId: string, count?: number, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.Products> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/products/random'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/products/random'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -702,7 +702,7 @@ export class BeezUPApi {
         * @param request 
         */
     public catalogSaveCustomColumn (storeId: string, columnId: string, request: models.CreateCustomColumnRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/customColumns/{columnId}'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/customColumns/{columnId}'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'columnId' + '}', String(columnId));
 
@@ -743,11 +743,11 @@ export class BeezUPApi {
         * @param changeOrderType The Order change type
         * @param userName Sometimes the user in the e-commerce application is not the same as user associated with the current subscription key. We recommend providing your application&#39;s user login.
         * @param request 
-        * @param ifMatch ETag value to identify the last known version of requested Order, to ensure that you are making a change on the lastest version of the order.\\ For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3 
+        * @param ifMatch ETag value to identify the last known version of requested resource.\\ To ensure that you are making a change on the lastest version of the resource.\\ For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3 
         * @param testMode If true, the operation will be not be sent to marketplace. But the validation will be taken in account.
         */
     public changeOrder (marketplaceTechnicalCode: string, accountId: number, beezUPOrderId: string, changeOrderType: string, userName: string, request: models.ChangeOrderRequest, ifMatch: string, testMode?: boolean, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/{changeOrderType}'
+        const localVarPath = this.basePath + '/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/{changeOrderType}'
             .replace('{' + 'marketplaceTechnicalCode' + '}', String(marketplaceTechnicalCode))
             .replace('{' + 'accountId' + '}', String(accountId))
             .replace('{' + 'beezUPOrderId' + '}', String(beezUPOrderId))
@@ -816,7 +816,7 @@ export class BeezUPApi {
         * @param testMode If true, the operation will be not be sent to marketplace. But the validation will be taken in account.
         */
     public changeOrderList (changeOrderType: string, userName: string, request: models.ChangeOrderListRequest, testMode?: boolean, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.BatchOrderOperationResponse> {
-        const localVarPath = this.basePath + '/v2/user/marketplaces/orders/batches/changeOrders/{changeOrderType}'
+        const localVarPath = this.basePath + '/user/marketplaces/orders/batches/changeOrders/{changeOrderType}'
             .replace('{' + 'changeOrderType' + '}', String(changeOrderType));
 
         let queryParameters: any = {};
@@ -861,7 +861,7 @@ export class BeezUPApi {
         * @param request 
         */
     public changePassword (request: models.ChangePasswordRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/customer/account/changePassword';
+        const localVarPath = this.basePath + '/user/customer/account/changePassword';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -891,7 +891,7 @@ export class BeezUPApi {
         * @param beezUPOrderId The BeezUP Order identifier
         */
     public clearMerchantOrderInfo (marketplaceTechnicalCode: string, accountId: number, beezUPOrderId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/clearMerchantOrderInfo'
+        const localVarPath = this.basePath + '/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/clearMerchantOrderInfo'
             .replace('{' + 'marketplaceTechnicalCode' + '}', String(marketplaceTechnicalCode))
             .replace('{' + 'accountId' + '}', String(accountId))
             .replace('{' + 'beezUPOrderId' + '}', String(beezUPOrderId));
@@ -929,7 +929,7 @@ export class BeezUPApi {
         * @param request 
         */
     public clearMerchantOrderInfoList (request: models.ClearMerchantOrderInfoListRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.BatchOrderOperationResponse> {
-        const localVarPath = this.basePath + '/v2/user/marketplaces/orders/batches/clearMerchantOrderInfos';
+        const localVarPath = this.basePath + '/user/marketplaces/orders/batches/clearMerchantOrderInfos';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -956,8 +956,8 @@ export class BeezUPApi {
         * 
         * @param request 
         */
-    public configureAutomaticTransitions (request: models.SaveAutomaticTransitionRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/marketplaces/orders/automaticTransitions';
+    public configureAutomaticTransitions (request: models.ConfigureAutomaticTransitionRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
+        const localVarPath = this.basePath + '/user/marketplaces/orders/automaticTransitions';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -986,7 +986,7 @@ export class BeezUPApi {
         * @param request 
         */
     public configureChannelCatalogCostSettings (channelCatalogId: string, request: models.CostSettings, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/channelCatalogs/{channelCatalogId}/settings/cost'
+        const localVarPath = this.basePath + '/user/channelCatalogs/{channelCatalogId}/settings/cost'
             .replace('{' + 'channelCatalogId' + '}', String(channelCatalogId));
 
         let queryParameters: any = {};
@@ -1020,7 +1020,7 @@ export class BeezUPApi {
         * @param request 
         */
     public configureChannelCatalogExclusionFilters (channelCatalogId: string, request: models.ExclusionFilters, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/channelCatalogs/{channelCatalogId}/exclusionFilters'
+        const localVarPath = this.basePath + '/user/channelCatalogs/{channelCatalogId}/exclusionFilters'
             .replace('{' + 'channelCatalogId' + '}', String(channelCatalogId));
 
         let queryParameters: any = {};
@@ -1054,7 +1054,7 @@ export class BeezUPApi {
         * @param request 
         */
     public configureChannelCatalogGeneralSettings (channelCatalogId: string, request: models.GeneralSettings, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/channelCatalogs/{channelCatalogId}/settings/general'
+        const localVarPath = this.basePath + '/user/channelCatalogs/{channelCatalogId}/settings/general'
             .replace('{' + 'channelCatalogId' + '}', String(channelCatalogId));
 
         let queryParameters: any = {};
@@ -1087,7 +1087,7 @@ export class BeezUPApi {
         * @param request 
         */
     public createChannelCatalog (request: models.CreateChannelCatalogRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.BeezUPCommonLink2>> {
-        const localVarPath = this.basePath + '/v2/user/channelCatalogs/';
+        const localVarPath = this.basePath + '/user/channelCatalogs/';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -1115,7 +1115,7 @@ export class BeezUPApi {
         * @param request 
         */
     public createContract (request: models.CreateContract, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.BeezUPCommonInfoSummaries> {
-        const localVarPath = this.basePath + '/v2/user/customer/contracts';
+        const localVarPath = this.basePath + '/user/customer/contracts';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -1144,7 +1144,7 @@ export class BeezUPApi {
         * @param request 
         */
     public createRule (storeId: string, request: models.CreateRuleRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/rules'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/rules'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -1177,7 +1177,7 @@ export class BeezUPApi {
         * @param request 
         */
     public createStore (request: models.CreateStoreRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.LinksGetStoresLink> {
-        const localVarPath = this.basePath + '/v2/user/customer/stores';
+        const localVarPath = this.basePath + '/user/customer/stores';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -1202,12 +1202,46 @@ export class BeezUPApi {
     /**
         * Delete the channel catalog
         * 
+        * @param channelCatalogId The channel catalog identifier
         */
-    public deleteChannelCatalog (extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/channelCatalogs/{channelCatalogId}';
+    public deleteChannelCatalog (channelCatalogId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
+        const localVarPath = this.basePath + '/user/channelCatalogs/{channelCatalogId}'
+            .replace('{' + 'channelCatalogId' + '}', String(channelCatalogId));
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
+        // verify required parameter 'channelCatalogId' is not null or undefined
+        if (channelCatalogId === null || channelCatalogId === undefined) {
+            throw new Error('Required parameter channelCatalogId was null or undefined when calling deleteChannelCatalog.');
+        }
+        let httpRequestParams: ng.IRequestConfig = {
+            method: 'DELETE',
+            url: localVarPath,
+                                    params: queryParameters,
+            headers: headerParams
+        };
+
+        if (extraHttpRequestParams) {
+            httpRequestParams = (<any>Object).assign(httpRequestParams, extraHttpRequestParams);
+        }
+
+        return this.$http(httpRequestParams);
+    }
+    /**
+        * Delete the exportation cache
+        * 
+        * @param channelCatalogId The channel catalog identifier
+        */
+    public deleteChannelCatalogExportationCache (channelCatalogId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
+        const localVarPath = this.basePath + '/user/channelCatalogs/{channelCatalogId}/exportations/cache'
+            .replace('{' + 'channelCatalogId' + '}', String(channelCatalogId));
+
+        let queryParameters: any = {};
+        let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
+        // verify required parameter 'channelCatalogId' is not null or undefined
+        if (channelCatalogId === null || channelCatalogId === undefined) {
+            throw new Error('Required parameter channelCatalogId was null or undefined when calling deleteChannelCatalogExportationCache.');
+        }
         let httpRequestParams: ng.IRequestConfig = {
             method: 'DELETE',
             url: localVarPath,
@@ -1229,7 +1263,7 @@ export class BeezUPApi {
         * @param channelColumnId The channel column identifier
         */
     public deleteChannelCatalogProductValueOverride (channelCatalogId: string, productId: string, channelColumnId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/overrides/{channelColumnId}'
+        const localVarPath = this.basePath + '/user/channelCatalogs/{channelCatalogId}/products/{productId}/overrides/{channelColumnId}'
             .replace('{' + 'channelCatalogId' + '}', String(channelCatalogId))
             .replace('{' + 'productId' + '}', String(productId))
             .replace('{' + 'channelColumnId' + '}', String(channelColumnId));
@@ -1266,7 +1300,7 @@ export class BeezUPApi {
         * 
         */
     public deleteNextContract (extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/customer/contracts/next';
+        const localVarPath = this.basePath + '/user/customer/contracts/next';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -1290,7 +1324,7 @@ export class BeezUPApi {
         * @param reportFilterId Your report filter identifier
         */
     public deleteReportFilter (storeId: string, reportFilterId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/reports/filters/{reportFilterId}'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/reports/filters/{reportFilterId}'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'reportFilterId' + '}', String(reportFilterId));
 
@@ -1324,7 +1358,7 @@ export class BeezUPApi {
         * @param ruleId Your rule identifier
         */
     public deleteRule (storeId: string, ruleId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/rules/{ruleId}'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/rules/{ruleId}'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'ruleId' + '}', String(ruleId));
 
@@ -1358,7 +1392,7 @@ export class BeezUPApi {
         * @param userId The friend user id
         */
     public deleteShare (storeId: string, userId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/customer/stores/{storeId}/shares/{userId}'
+        const localVarPath = this.basePath + '/user/customer/stores/{storeId}/shares/{userId}'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'userId' + '}', String(userId));
 
@@ -1391,7 +1425,7 @@ export class BeezUPApi {
         * @param storeId Your store identifier
         */
     public deleteStore (storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/customer/stores/{storeId}'
+        const localVarPath = this.basePath + '/user/customer/stores/{storeId}'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -1419,7 +1453,7 @@ export class BeezUPApi {
         * @param channelCatalogId The channel catalog identifier
         */
     public disableChannelCatalog (channelCatalogId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/channelCatalogs/{channelCatalogId}/disable'
+        const localVarPath = this.basePath + '/user/channelCatalogs/{channelCatalogId}/disable'
             .replace('{' + 'channelCatalogId' + '}', String(channelCatalogId));
 
         let queryParameters: any = {};
@@ -1448,7 +1482,7 @@ export class BeezUPApi {
         * @param productId The product identifier
         */
     public disableChannelCatalogProduct (channelCatalogId: string, productId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/disable'
+        const localVarPath = this.basePath + '/user/channelCatalogs/{channelCatalogId}/products/{productId}/disable'
             .replace('{' + 'channelCatalogId' + '}', String(channelCatalogId))
             .replace('{' + 'productId' + '}', String(productId));
 
@@ -1482,7 +1516,7 @@ export class BeezUPApi {
         * @param ruleId Your rule identifier
         */
     public disableRule (storeId: string, ruleId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/rules/{ruleId}/disable'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/rules/{ruleId}/disable'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'ruleId' + '}', String(ruleId));
 
@@ -1515,7 +1549,7 @@ export class BeezUPApi {
         * @param channelCatalogId The channel catalog identifier
         */
     public enableChannelCatalog (channelCatalogId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/channelCatalogs/{channelCatalogId}/enable'
+        const localVarPath = this.basePath + '/user/channelCatalogs/{channelCatalogId}/enable'
             .replace('{' + 'channelCatalogId' + '}', String(channelCatalogId));
 
         let queryParameters: any = {};
@@ -1544,7 +1578,7 @@ export class BeezUPApi {
         * @param ruleId Your rule identifier
         */
     public enableRule (storeId: string, ruleId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/rules/{ruleId}/enable'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/rules/{ruleId}/enable'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'ruleId' + '}', String(ruleId));
 
@@ -1574,26 +1608,17 @@ export class BeezUPApi {
     /**
         * Request a new Order report exportation to be generated
         * A new file will be generated containing a summary of all the Orders matching the requested filter settings.
-        * @param format The type of the file to export
         * @param request 
         */
-    public exportOrders (format: string, request: models.ExportOrderListRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/marketplaces/orders/exportations';
+    public exportOrders (request: models.ExportOrderListRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
+        const localVarPath = this.basePath + '/user/marketplaces/orders/exportations';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
-        // verify required parameter 'format' is not null or undefined
-        if (format === null || format === undefined) {
-            throw new Error('Required parameter format was null or undefined when calling exportOrders.');
-        }
         // verify required parameter 'request' is not null or undefined
         if (request === null || request === undefined) {
             throw new Error('Required parameter request was null or undefined when calling exportOrders.');
         }
-        if (format !== undefined) {
-            queryParameters['format'] = format;
-        }
-
         let httpRequestParams: ng.IRequestConfig = {
             method: 'POST',
             url: localVarPath,
@@ -1616,7 +1641,7 @@ export class BeezUPApi {
         * @param request 
         */
     public exportStoreReportByCategory (storeId: string, format: string, request: models.ReportByCategoryRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.BeezUPCommonLink3> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/reports/bycategory/export'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/reports/bycategory/export'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -1659,7 +1684,7 @@ export class BeezUPApi {
         * @param request 
         */
     public exportStoreReportByChannel (storeId: string, format: string, request: models.ReportByChannelRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.BeezUPCommonLink3> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/reports/bychannel/export'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/reports/bychannel/export'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -1702,7 +1727,7 @@ export class BeezUPApi {
         * @param request 
         */
     public exportStoreReportByProduct (storeId: string, format: string, request: models.ReportByProductRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.BeezUPCommonLink3> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/reports/byproduct/export'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/reports/byproduct/export'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -1742,7 +1767,7 @@ export class BeezUPApi {
         * 
         */
     public getAutomaticTransitions (extraHttpRequestParams?: any ) : ng.IHttpPromise<models.AutomaticTransitionInfos> {
-        const localVarPath = this.basePath + '/v2/user/marketplaces/orders/automaticTransitions';
+        const localVarPath = this.basePath + '/user/marketplaces/orders/automaticTransitions';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -1765,7 +1790,7 @@ export class BeezUPApi {
         * @param storeId The store identifier
         */
     public getAvailableChannels (storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.ChannelHeader>> {
-        const localVarPath = this.basePath + '/v2/user/channels/';
+        const localVarPath = this.basePath + '/user/channels/';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -1795,7 +1820,7 @@ export class BeezUPApi {
         * 
         */
     public getBillingPeriods (extraHttpRequestParams?: any ) : ng.IHttpPromise<models.BillingPeriods> {
-        const localVarPath = this.basePath + '/v2/user/customer/billingPeriods';
+        const localVarPath = this.basePath + '/user/customer/billingPeriods';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -1818,7 +1843,7 @@ export class BeezUPApi {
         * @param channelCatalogId The channel catalog identifier
         */
     public getChannelCatalog (channelCatalogId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ChannelCatalog> {
-        const localVarPath = this.basePath + '/v2/user/channelCatalogs/{channelCatalogId}'
+        const localVarPath = this.basePath + '/user/channelCatalogs/{channelCatalogId}'
             .replace('{' + 'channelCatalogId' + '}', String(channelCatalogId));
 
         let queryParameters: any = {};
@@ -1846,7 +1871,7 @@ export class BeezUPApi {
         * @param channelCatalogId The channel catalog identifier
         */
     public getChannelCatalogCategories (channelCatalogId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ChannelCatalogCategoryMappings> {
-        const localVarPath = this.basePath + '/v2/user/channelCatalogs/{channelCatalogId}/categoryMappings'
+        const localVarPath = this.basePath + '/user/channelCatalogs/{channelCatalogId}/categoryMappings'
             .replace('{' + 'channelCatalogId' + '}', String(channelCatalogId));
 
         let queryParameters: any = {};
@@ -1873,10 +1898,84 @@ export class BeezUPApi {
         * 
         */
     public getChannelCatalogExclusionFilterOperators (extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.ExclusionFilterOperator>> {
-        const localVarPath = this.basePath + '/v2/user/channelCatalogs/exclusionFilterOperators';
+        const localVarPath = this.basePath + '/user/channelCatalogs/exclusionFilterOperators';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
+        let httpRequestParams: ng.IRequestConfig = {
+            method: 'GET',
+            url: localVarPath,
+                                    params: queryParameters,
+            headers: headerParams
+        };
+
+        if (extraHttpRequestParams) {
+            httpRequestParams = (<any>Object).assign(httpRequestParams, extraHttpRequestParams);
+        }
+
+        return this.$http(httpRequestParams);
+    }
+    /**
+        * Get the exportation cache information
+        * 
+        * @param channelCatalogId The channel catalog identifier
+        */
+    public getChannelCatalogExportationCacheInfo (channelCatalogId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ChannelCatalogExportCacheInfoResponse> {
+        const localVarPath = this.basePath + '/user/channelCatalogs/{channelCatalogId}/exportations/cache'
+            .replace('{' + 'channelCatalogId' + '}', String(channelCatalogId));
+
+        let queryParameters: any = {};
+        let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
+        // verify required parameter 'channelCatalogId' is not null or undefined
+        if (channelCatalogId === null || channelCatalogId === undefined) {
+            throw new Error('Required parameter channelCatalogId was null or undefined when calling getChannelCatalogExportationCacheInfo.');
+        }
+        let httpRequestParams: ng.IRequestConfig = {
+            method: 'GET',
+            url: localVarPath,
+                                    params: queryParameters,
+            headers: headerParams
+        };
+
+        if (extraHttpRequestParams) {
+            httpRequestParams = (<any>Object).assign(httpRequestParams, extraHttpRequestParams);
+        }
+
+        return this.$http(httpRequestParams);
+    }
+    /**
+        * Get the exportation history
+        * 
+        * @param channelCatalogId The channel catalog identifier
+        * @param pageNumber The page number you want to get
+        * @param pageSize The entry count you want to get
+        */
+    public getChannelCatalogExportationHistory (channelCatalogId: string, pageNumber: number, pageSize: number, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ChannelCatalogExportationHistory> {
+        const localVarPath = this.basePath + '/user/channelCatalogs/{channelCatalogId}/exportations/history'
+            .replace('{' + 'channelCatalogId' + '}', String(channelCatalogId));
+
+        let queryParameters: any = {};
+        let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
+        // verify required parameter 'channelCatalogId' is not null or undefined
+        if (channelCatalogId === null || channelCatalogId === undefined) {
+            throw new Error('Required parameter channelCatalogId was null or undefined when calling getChannelCatalogExportationHistory.');
+        }
+        // verify required parameter 'pageNumber' is not null or undefined
+        if (pageNumber === null || pageNumber === undefined) {
+            throw new Error('Required parameter pageNumber was null or undefined when calling getChannelCatalogExportationHistory.');
+        }
+        // verify required parameter 'pageSize' is not null or undefined
+        if (pageSize === null || pageSize === undefined) {
+            throw new Error('Required parameter pageSize was null or undefined when calling getChannelCatalogExportationHistory.');
+        }
+        if (pageNumber !== undefined) {
+            queryParameters['pageNumber'] = pageNumber;
+        }
+
+        if (pageSize !== undefined) {
+            queryParameters['pageSize'] = pageSize;
+        }
+
         let httpRequestParams: ng.IRequestConfig = {
             method: 'GET',
             url: localVarPath,
@@ -1896,7 +1995,7 @@ export class BeezUPApi {
         * @param channelCatalogId 
         */
     public getChannelCatalogMarketplaceProperties (channelCatalogId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ChannelCatalogMarketplaceProperties> {
-        const localVarPath = this.basePath + '/v2/user/marketplaces/channelcatalogs/{channelCatalogId}/properties'
+        const localVarPath = this.basePath + '/user/marketplaces/channelcatalogs/{channelCatalogId}/properties'
             .replace('{' + 'channelCatalogId' + '}', String(channelCatalogId));
 
         let queryParameters: any = {};
@@ -1924,7 +2023,7 @@ export class BeezUPApi {
         * @param channelCatalogId Channel Catalog Id to query (required)
         */
     public getChannelCatalogMarketplaceSettings (channelCatalogId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ChannelCatalogMarketplaceSettings> {
-        const localVarPath = this.basePath + '/v2/user/marketplaces/channelcatalogs/{channelCatalogId}/settings'
+        const localVarPath = this.basePath + '/user/marketplaces/channelcatalogs/{channelCatalogId}/settings'
             .replace('{' + 'channelCatalogId' + '}', String(channelCatalogId));
 
         let queryParameters: any = {};
@@ -1947,13 +2046,43 @@ export class BeezUPApi {
         return this.$http(httpRequestParams);
     }
     /**
+        * Get channel catalog products related to these channel catalogs
+        * 
+        * @param productId The product identifier
+        * @param request 
+        */
+    public getChannelCatalogProductByChannelCatalog (productId: string, request?: models.ChannelCatalogProductByChannelCatalogRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ChannelCatalogProductByChannelCatalogResponse> {
+        const localVarPath = this.basePath + '/user/channelCatalogs/products/{productId}'
+            .replace('{' + 'productId' + '}', String(productId));
+
+        let queryParameters: any = {};
+        let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
+        // verify required parameter 'productId' is not null or undefined
+        if (productId === null || productId === undefined) {
+            throw new Error('Required parameter productId was null or undefined when calling getChannelCatalogProductByChannelCatalog.');
+        }
+        let httpRequestParams: ng.IRequestConfig = {
+            method: 'POST',
+            url: localVarPath,
+            data: request,
+                        params: queryParameters,
+            headers: headerParams
+        };
+
+        if (extraHttpRequestParams) {
+            httpRequestParams = (<any>Object).assign(httpRequestParams, extraHttpRequestParams);
+        }
+
+        return this.$http(httpRequestParams);
+    }
+    /**
         * Get channel catalog product information
         * 
         * @param channelCatalogId The channel catalog identifier
         * @param productId The product identifier
         */
     public getChannelCatalogProductInfo (channelCatalogId: string, productId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ChannelCatalogProductInfo> {
-        const localVarPath = this.basePath + '/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}'
+        const localVarPath = this.basePath + '/user/channelCatalogs/{channelCatalogId}/products/{productId}'
             .replace('{' + 'channelCatalogId' + '}', String(channelCatalogId))
             .replace('{' + 'productId' + '}', String(productId));
 
@@ -1987,7 +2116,7 @@ export class BeezUPApi {
         * @param request The channel catalog product list filter
         */
     public getChannelCatalogProductInfoList (channelCatalogId: string, request?: models.GetChannelCatalogProductInfoListRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ChannelCatalogProductInfoList> {
-        const localVarPath = this.basePath + '/v2/user/channelCatalogs/{channelCatalogId}/products'
+        const localVarPath = this.basePath + '/user/channelCatalogs/{channelCatalogId}/products'
             .replace('{' + 'channelCatalogId' + '}', String(channelCatalogId));
 
         let queryParameters: any = {};
@@ -2016,7 +2145,7 @@ export class BeezUPApi {
         * @param storeId The store identifier
         */
     public getChannelCatalogs (storeId?: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ChannelCatalogList> {
-        const localVarPath = this.basePath + '/v2/user/channelCatalogs/';
+        const localVarPath = this.basePath + '/user/channelCatalogs/';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -2044,7 +2173,7 @@ export class BeezUPApi {
         * @param acceptEncoding Indicates that the client accepts that the response will be compressed to reduce traffic size.
         */
     public getChannelCategories (channelId: string, acceptEncoding: Array<string>, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ChannelRootCategory> {
-        const localVarPath = this.basePath + '/v2/user/channels/{channelId}/categories'
+        const localVarPath = this.basePath + '/user/channels/{channelId}/categories'
             .replace('{' + 'channelId' + '}', String(channelId));
 
         let queryParameters: any = {};
@@ -2080,7 +2209,7 @@ export class BeezUPApi {
         * @param request Allow you to filter the channel column identifier list your want to get
         */
     public getChannelColumns (channelId: string, acceptEncoding: Array<string>, request?: Array<models.BeezUPCommonChannelColumnId>, extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.ChannelColumn>> {
-        const localVarPath = this.basePath + '/v2/user/channels/{channelId}/columns'
+        const localVarPath = this.basePath + '/user/channels/{channelId}/columns'
             .replace('{' + 'channelId' + '}', String(channelId));
 
         let queryParameters: any = {};
@@ -2115,7 +2244,7 @@ export class BeezUPApi {
         * @param channelId The channel identifier
         */
     public getChannelInfo (channelId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ChannelInfo> {
-        const localVarPath = this.basePath + '/v2/user/channels/{channelId}'
+        const localVarPath = this.basePath + '/user/channels/{channelId}'
             .replace('{' + 'channelId' + '}', String(channelId));
 
         let queryParameters: any = {};
@@ -2138,11 +2267,68 @@ export class BeezUPApi {
         return this.$http(httpRequestParams);
     }
     /**
+        * The channel list for one country
+        * 
+        * @param countryIsoCode The country iso code alpha 3 based on this: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3#Decoding_table \\ To know which country are available you have to use the operation: GetChannelsByCountry 
+        * @param acceptEncoding Allows the client to indicate wether it accepts a compressed encoding to reduce traffic size.
+        */
+    public getChannels (countryIsoCode: string, acceptEncoding: Array<string>, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ChannelInfoList> {
+        const localVarPath = this.basePath + '/public/channels/{countryIsoCode}'
+            .replace('{' + 'countryIsoCode' + '}', String(countryIsoCode));
+
+        let queryParameters: any = {};
+        let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
+        // verify required parameter 'countryIsoCode' is not null or undefined
+        if (countryIsoCode === null || countryIsoCode === undefined) {
+            throw new Error('Required parameter countryIsoCode was null or undefined when calling getChannels.');
+        }
+        // verify required parameter 'acceptEncoding' is not null or undefined
+        if (acceptEncoding === null || acceptEncoding === undefined) {
+            throw new Error('Required parameter acceptEncoding was null or undefined when calling getChannels.');
+        }
+        headerParams['Accept-Encoding'] = acceptEncoding;
+
+        let httpRequestParams: ng.IRequestConfig = {
+            method: 'GET',
+            url: localVarPath,
+                                    params: queryParameters,
+            headers: headerParams
+        };
+
+        if (extraHttpRequestParams) {
+            httpRequestParams = (<any>Object).assign(httpRequestParams, extraHttpRequestParams);
+        }
+
+        return this.$http(httpRequestParams);
+    }
+    /**
+        * Get public channel index
+        * Use this operation to get the correct link to the channels and to the list of values
+        */
+    public getChannelsIndex (extraHttpRequestParams?: any ) : ng.IHttpPromise<models.PublicChannelIndex> {
+        const localVarPath = this.basePath + '/public/channels/';
+
+        let queryParameters: any = {};
+        let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
+        let httpRequestParams: ng.IRequestConfig = {
+            method: 'GET',
+            url: localVarPath,
+                                    params: queryParameters,
+            headers: headerParams
+        };
+
+        if (extraHttpRequestParams) {
+            httpRequestParams = (<any>Object).assign(httpRequestParams, extraHttpRequestParams);
+        }
+
+        return this.$http(httpRequestParams);
+    }
+    /**
         * Get contract list
         * 
         */
     public getContracts (extraHttpRequestParams?: any ) : ng.IHttpPromise<models.Contracts> {
-        const localVarPath = this.basePath + '/v2/user/customer/contracts';
+        const localVarPath = this.basePath + '/user/customer/contracts';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -2164,7 +2350,7 @@ export class BeezUPApi {
         * 
         */
     public getCreditCardInfo (extraHttpRequestParams?: any ) : ng.IHttpPromise<models.CreditCardInfoResponse> {
-        const localVarPath = this.basePath + '/v2/user/customer/account/creditCardInfo';
+        const localVarPath = this.basePath + '/user/customer/account/creditCardInfo';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -2187,7 +2373,7 @@ export class BeezUPApi {
         * @param userId Your friend user id
         */
     public getFriendInfo (userId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.UserFriendInfo> {
-        const localVarPath = this.basePath + '/v2/user/customer/friends/{userId}'
+        const localVarPath = this.basePath + '/user/customer/friends/{userId}'
             .replace('{' + 'userId' + '}', String(userId));
 
         let queryParameters: any = {};
@@ -2214,7 +2400,7 @@ export class BeezUPApi {
         * 
         */
     public getInvoices (extraHttpRequestParams?: any ) : ng.IHttpPromise<models.Invoices> {
-        const localVarPath = this.basePath + '/v2/user/customer/invoices';
+        const localVarPath = this.basePath + '/user/customer/invoices';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -2236,7 +2422,7 @@ export class BeezUPApi {
         * 
         */
     public getMarketplaceAccountStores (extraHttpRequestParams?: any ) : ng.IHttpPromise<models.MarketplaceChannelCatalogList> {
-        const localVarPath = this.basePath + '/v2/user/marketplaces/channelcatalogs/';
+        const localVarPath = this.basePath + '/user/marketplaces/channelcatalogs/';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -2258,7 +2444,7 @@ export class BeezUPApi {
         * 
         */
     public getMarketplaceAccountsSynchronization (extraHttpRequestParams?: any ) : ng.IHttpPromise<models.AccountSynchronizations> {
-        const localVarPath = this.basePath + '/v2/user/marketplaces/orders/status';
+        const localVarPath = this.basePath + '/user/marketplaces/orders/status';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -2281,7 +2467,7 @@ export class BeezUPApi {
         * @param request 
         */
     public getOffer (request: models.OfferRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.Offer> {
-        const localVarPath = this.basePath + '/v2/user/customer/offers';
+        const localVarPath = this.basePath + '/user/customer/offers';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -2309,10 +2495,10 @@ export class BeezUPApi {
         * @param marketplaceTechnicalCode The marketplace technical code
         * @param accountId The account identifier
         * @param beezUPOrderId The BeezUP Order identifier
-        * @param ifNoneMatch ETag value to identify the last known version of requested Order\\ For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3 
+        * @param ifNoneMatch ETag value to identify the last known version of requested resource.\\ To avoid useless exchange, we recommend you to indicate the ETag you previously got from this operation.\\ If the ETag value does not match the response will be 200 to give you a new content, otherwise the response will be: 304 Not Modified, without any content.\\ For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3 
         */
     public getOrder (marketplaceTechnicalCode: string, accountId: number, beezUPOrderId: string, ifNoneMatch?: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.Order> {
-        const localVarPath = this.basePath + '/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}'
+        const localVarPath = this.basePath + '/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}'
             .replace('{' + 'marketplaceTechnicalCode' + '}', String(marketplaceTechnicalCode))
             .replace('{' + 'accountId' + '}', String(accountId))
             .replace('{' + 'beezUPOrderId' + '}', String(beezUPOrderId));
@@ -2350,11 +2536,11 @@ export class BeezUPApi {
         * Get a paginated list of Order report exportations
         * 
         * @param pageNumber The page number you want to get
-        * @param pageSize The count of Order report exportations you want to get
+        * @param pageSize The entry count you want to get
         * @param storeId The store identifier to regroup the order exportations
         */
     public getOrderExportations (pageNumber: number, pageSize: number, storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.OrderExportations> {
-        const localVarPath = this.basePath + '/v2/user/marketplaces/orders/exportations';
+        const localVarPath = this.basePath + '/user/marketplaces/orders/exportations';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -2403,7 +2589,7 @@ export class BeezUPApi {
         * @param beezUPOrderId The BeezUP Order identifier
         */
     public getOrderHistory (marketplaceTechnicalCode: string, accountId: number, beezUPOrderId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.OrderHistory> {
-        const localVarPath = this.basePath + '/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/history'
+        const localVarPath = this.basePath + '/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/history'
             .replace('{' + 'marketplaceTechnicalCode' + '}', String(marketplaceTechnicalCode))
             .replace('{' + 'accountId' + '}', String(accountId))
             .replace('{' + 'beezUPOrderId' + '}', String(beezUPOrderId));
@@ -2436,19 +2622,45 @@ export class BeezUPApi {
         return this.$http(httpRequestParams);
     }
     /**
+        * Get all actions you can do on the order API
+        * 
+        */
+    public getOrderIndex (extraHttpRequestParams?: any ) : ng.IHttpPromise<models.OrderIndex> {
+        const localVarPath = this.basePath + '/user/marketplaces/orders/';
+
+        let queryParameters: any = {};
+        let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
+        let httpRequestParams: ng.IRequestConfig = {
+            method: 'GET',
+            url: localVarPath,
+                                    params: queryParameters,
+            headers: headerParams
+        };
+
+        if (extraHttpRequestParams) {
+            httpRequestParams = (<any>Object).assign(httpRequestParams, extraHttpRequestParams);
+        }
+
+        return this.$http(httpRequestParams);
+    }
+    /**
         * Get a paginated list of all Orders with all Order and Order Item(s) properties
         * The purpose of this operation is to reduce the amount of request to the API.\\ \\ Previous implmentation of this feature only returned a partial (light) version of the Orders. The purpose of this API is to reduce the number of incoming requests by returning the complete (full) Order and Order Item(s) properties. 
         * @param acceptEncoding Allows the client to indicate wether it accepts a compressed encoding to reduce traffic size
         * @param request 
         */
-    public getOrderListFull (acceptEncoding: Array<string>, request?: models.OrderListRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.OrderListFull> {
-        const localVarPath = this.basePath + '/v2/user/marketplaces/orders/list/full';
+    public getOrderListFull (acceptEncoding: Array<string>, request: models.OrderListRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.OrderListFull> {
+        const localVarPath = this.basePath + '/user/marketplaces/orders/list/full';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
         // verify required parameter 'acceptEncoding' is not null or undefined
         if (acceptEncoding === null || acceptEncoding === undefined) {
             throw new Error('Required parameter acceptEncoding was null or undefined when calling getOrderListFull.');
+        }
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling getOrderListFull.');
         }
         headerParams['Accept-Encoding'] = acceptEncoding;
 
@@ -2471,11 +2683,15 @@ export class BeezUPApi {
         * 
         * @param request 
         */
-    public getOrderListLight (request?: models.OrderListRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.OrderListLight> {
-        const localVarPath = this.basePath + '/v2/user/marketplaces/orders/list/light';
+    public getOrderListLight (request: models.OrderListRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.OrderListLight> {
+        const localVarPath = this.basePath + '/user/marketplaces/orders/list/light';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling getOrderListLight.');
+        }
         let httpRequestParams: ng.IRequestConfig = {
             method: 'POST',
             url: localVarPath,
@@ -2495,10 +2711,69 @@ export class BeezUPApi {
         * 
         */
     public getProfilePictureInfo (extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ProfilePictureInfoResponse> {
-        const localVarPath = this.basePath + '/v2/user/customer/account/profilePictureInfo';
+        const localVarPath = this.basePath + '/user/customer/account/profilePictureInfo';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
+        let httpRequestParams: ng.IRequestConfig = {
+            method: 'GET',
+            url: localVarPath,
+                                    params: queryParameters,
+            headers: headerParams
+        };
+
+        if (extraHttpRequestParams) {
+            httpRequestParams = (<any>Object).assign(httpRequestParams, extraHttpRequestParams);
+        }
+
+        return this.$http(httpRequestParams);
+    }
+    /**
+        * Get the list of values related to this list name
+        * 
+        * @param listName The list of value name your want to get
+        * @param acceptLanguage Indicates that the client accepts the following languages.
+        * @param ifNoneMatch ETag value to identify the last known version of requested resource.\\ To avoid useless exchange, we recommend you to indicate the ETag you previously got from this operation.\\ If the ETag value does not match the response will be 200 to give you a new content, otherwise the response will be: 304 Not Modified, without any content.\\ For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3 
+        */
+    public getPublicListOfValues (listName: string, acceptLanguage?: Array<string>, ifNoneMatch?: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.PublicListOfValuesResponse> {
+        const localVarPath = this.basePath + '/public/lov/{listName}'
+            .replace('{' + 'listName' + '}', String(listName));
+
+        let queryParameters: any = {};
+        let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
+        // verify required parameter 'listName' is not null or undefined
+        if (listName === null || listName === undefined) {
+            throw new Error('Required parameter listName was null or undefined when calling getPublicListOfValues.');
+        }
+        headerParams['Accept-Language'] = acceptLanguage;
+
+        headerParams['If-None-Match'] = ifNoneMatch;
+
+        let httpRequestParams: ng.IRequestConfig = {
+            method: 'GET',
+            url: localVarPath,
+                                    params: queryParameters,
+            headers: headerParams
+        };
+
+        if (extraHttpRequestParams) {
+            httpRequestParams = (<any>Object).assign(httpRequestParams, extraHttpRequestParams);
+        }
+
+        return this.$http(httpRequestParams);
+    }
+    /**
+        * Get all list names
+        * 
+        * @param ifNoneMatch ETag value to identify the last known version of requested resource.\\ To avoid useless exchange, we recommend you to indicate the ETag you previously got from this operation.\\ If the ETag value does not match the response will be 200 to give you a new content, otherwise the response will be: 304 Not Modified, without any content.\\ For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3 
+        */
+    public getPublicLovIndex (ifNoneMatch?: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.PublicLovIndex> {
+        const localVarPath = this.basePath + '/public/lov/';
+
+        let queryParameters: any = {};
+        let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
+        headerParams['If-None-Match'] = ifNoneMatch;
+
         let httpRequestParams: ng.IRequestConfig = {
             method: 'GET',
             url: localVarPath,
@@ -2522,7 +2797,7 @@ export class BeezUPApi {
         * @param publicationTypes Publication types by which to filter (optional)
         */
     public getPublications (marketplaceTechnicalCode: string, accountId: number, channelCatalogId?: string, count?: number, publicationTypes?: Array<string>, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.AccountPublications> {
-        const localVarPath = this.basePath + '/v2/user/marketplaces/channelcatalogs/publications/{marketplaceTechnicalCode}/{accountId}/history'
+        const localVarPath = this.basePath + '/user/marketplaces/channelcatalogs/publications/{marketplaceTechnicalCode}/{accountId}/history'
             .replace('{' + 'marketplaceTechnicalCode' + '}', String(marketplaceTechnicalCode))
             .replace('{' + 'accountId' + '}', String(accountId));
 
@@ -2568,7 +2843,7 @@ export class BeezUPApi {
         * @param reportFilterId Your report filter identifier
         */
     public getReportFilter (storeId: string, reportFilterId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ReportFilter> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/reports/filters/{reportFilterId}'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/reports/filters/{reportFilterId}'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'reportFilterId' + '}', String(reportFilterId));
 
@@ -2601,7 +2876,7 @@ export class BeezUPApi {
         * @param storeId Your store identifier
         */
     public getReportFilters (storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ReportFilters> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/reports/filters'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/reports/filters'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -2630,7 +2905,7 @@ export class BeezUPApi {
         * @param functionalityCodeList The functionality code list you want to check
         */
     public getRights (storeId: string, functionalityCodeList: Array<string>, extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.FunctionalityRightInfo>> {
-        const localVarPath = this.basePath + '/v2/user/customer/stores/{storeId}/rights'
+        const localVarPath = this.basePath + '/user/customer/stores/{storeId}/rights'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -2664,7 +2939,7 @@ export class BeezUPApi {
         * @param ruleId Your rule identifier
         */
     public getRule (storeId: string, ruleId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.Rule> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/rules/{ruleId}'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/rules/{ruleId}'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'ruleId' + '}', String(ruleId));
 
@@ -2697,7 +2972,7 @@ export class BeezUPApi {
         * @param storeId Your store identifier
         */
     public getRules (storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.RuleList> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/rules'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/rules'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -2727,7 +3002,7 @@ export class BeezUPApi {
         * @param pageSize The count of rule history to retrieve
         */
     public getRulesExecutions (storeId: string, pageNumber: number, pageSize: number, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.RuleExecutionReportings> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/rules/executions'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/rules/executions'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -2771,7 +3046,7 @@ export class BeezUPApi {
         * @param storeId Your store identifier
         */
     public getShares (storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.StoreShares> {
-        const localVarPath = this.basePath + '/v2/user/customer/stores/{storeId}/shares'
+        const localVarPath = this.basePath + '/user/customer/stores/{storeId}/shares'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -2798,7 +3073,7 @@ export class BeezUPApi {
         * 
         */
     public getStandardOffers (extraHttpRequestParams?: any ) : ng.IHttpPromise<models.StandardOffers> {
-        const localVarPath = this.basePath + '/v2/user/customer/offers';
+        const localVarPath = this.basePath + '/user/customer/offers';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -2821,7 +3096,7 @@ export class BeezUPApi {
         * @param storeId Your store identifier
         */
     public getStore (storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.StoreHeader> {
-        const localVarPath = this.basePath + '/v2/user/customer/stores/{storeId}'
+        const localVarPath = this.basePath + '/user/customer/stores/{storeId}'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -2849,7 +3124,7 @@ export class BeezUPApi {
         * @param storeId Your store identifier
         */
     public getStoreAlerts (storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.StoreAlerts> {
-        const localVarPath = this.basePath + '/v2/user/customer/stores/{storeId}/alerts'
+        const localVarPath = this.basePath + '/user/customer/stores/{storeId}/alerts'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -2878,7 +3153,7 @@ export class BeezUPApi {
         * @param request 
         */
     public getStoreReportByCategory (storeId: string, request: models.ReportByCategoryRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ReportByCategoryResponse> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/reports/bycategory'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/reports/bycategory'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -2912,7 +3187,7 @@ export class BeezUPApi {
         * @param request 
         */
     public getStoreReportByChannel (storeId: string, request: models.ReportByChannelRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ReportByChannelResponse> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/reports/bychannel'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/reports/bychannel'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -2946,7 +3221,7 @@ export class BeezUPApi {
         * @param request 
         */
     public getStoreReportByDay (storeId: string, request: models.ReportByDayRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ReportByDayResponse> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/reports/byday'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/reports/byday'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -2981,7 +3256,7 @@ export class BeezUPApi {
         * @param request 
         */
     public getStoreReportByDayExport (storeId: string, format: string, request: models.ReportByDayRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.BeezUPCommonLink3> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/reports/byday/export'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/reports/byday/export'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -3023,7 +3298,7 @@ export class BeezUPApi {
         * @param request 
         */
     public getStoreReportByProduct (storeId: string, request: models.ReportByProductRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ReportByProductResponse> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/reports/byproduct'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/reports/byproduct'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -3057,7 +3332,7 @@ export class BeezUPApi {
         * @param count The click&#39;s count you want to get
         */
     public getStoreTrackedClicks (storeId: string, count?: number, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.TrackedClicks> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/tracking/clicks'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/tracking/clicks'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -3090,7 +3365,7 @@ export class BeezUPApi {
         * @param count The external order&#39;s count you want to get
         */
     public getStoreTrackedExternalOrders (storeId: string, count?: number, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.TrackedExternalOrders> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/tracking/externalorders'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/tracking/externalorders'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -3123,7 +3398,7 @@ export class BeezUPApi {
         * @param count The order&#39;s count you want to get
         */
     public getStoreTrackedOrders (storeId: string, count?: number, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.TrackedOrders> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/tracking/orders'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/tracking/orders'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -3155,7 +3430,7 @@ export class BeezUPApi {
         * @param storeId Your store identifier
         */
     public getStoreTrackingStatus (storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.StoreTrackingStatus> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/tracking/status'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/tracking/status'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -3182,7 +3457,7 @@ export class BeezUPApi {
         * 
         */
     public getStores (extraHttpRequestParams?: any ) : ng.IHttpPromise<models.Stores> {
-        const localVarPath = this.basePath + '/v2/user/customer/stores';
+        const localVarPath = this.basePath + '/user/customer/stores';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -3204,7 +3479,7 @@ export class BeezUPApi {
         * Your clicks and orders are eventually consistent. \\ This operation indicates you at which date the projections are. 
         */
     public getTrackingStatus (extraHttpRequestParams?: any ) : ng.IHttpPromise<models.TrackingStatus> {
-        const localVarPath = this.basePath + '/v2/user/analytics/tracking/status';
+        const localVarPath = this.basePath + '/user/analytics/tracking/status';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -3226,79 +3501,7 @@ export class BeezUPApi {
         * 
         */
     public getUserAccountInfo (extraHttpRequestParams?: any ) : ng.IHttpPromise<models.AccountInfo> {
-        const localVarPath = this.basePath + '/v2/user/customer/account';
-
-        let queryParameters: any = {};
-        let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
-        let httpRequestParams: ng.IRequestConfig = {
-            method: 'GET',
-            url: localVarPath,
-                                    params: queryParameters,
-            headers: headerParams
-        };
-
-        if (extraHttpRequestParams) {
-            httpRequestParams = (<any>Object).assign(httpRequestParams, extraHttpRequestParams);
-        }
-
-        return this.$http(httpRequestParams);
-    }
-    /**
-        * Get list of values related to this group name
-        * 
-        * @param listGroupName The list group name your want to get
-        */
-    public getUserListGroup (listGroupName: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.BeezUPCommonLOVLink2>> {
-        const localVarPath = this.basePath + '/v2/user/lov/groups/{listGroupName}'
-            .replace('{' + 'listGroupName' + '}', String(listGroupName));
-
-        let queryParameters: any = {};
-        let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
-        // verify required parameter 'listGroupName' is not null or undefined
-        if (listGroupName === null || listGroupName === undefined) {
-            throw new Error('Required parameter listGroupName was null or undefined when calling getUserListGroup.');
-        }
-        let httpRequestParams: ng.IRequestConfig = {
-            method: 'GET',
-            url: localVarPath,
-                                    params: queryParameters,
-            headers: headerParams
-        };
-
-        if (extraHttpRequestParams) {
-            httpRequestParams = (<any>Object).assign(httpRequestParams, extraHttpRequestParams);
-        }
-
-        return this.$http(httpRequestParams);
-    }
-    /**
-        * Get list of group of list name
-        * 
-        */
-    public getUserListGroupNames (extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.BeezUPCommonLOVLink2>> {
-        const localVarPath = this.basePath + '/v2/user/lov/groups';
-
-        let queryParameters: any = {};
-        let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
-        let httpRequestParams: ng.IRequestConfig = {
-            method: 'GET',
-            url: localVarPath,
-                                    params: queryParameters,
-            headers: headerParams
-        };
-
-        if (extraHttpRequestParams) {
-            httpRequestParams = (<any>Object).assign(httpRequestParams, extraHttpRequestParams);
-        }
-
-        return this.$http(httpRequestParams);
-    }
-    /**
-        * Get all list names
-        * 
-        */
-    public getUserListNames (extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.BeezUPCommonLOVLink2>> {
-        const localVarPath = this.basePath + '/v2/user/lov/';
+        const localVarPath = this.basePath + '/user/customer/account';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -3320,9 +3523,10 @@ export class BeezUPApi {
         * 
         * @param listName The list of value name your want to get
         * @param acceptLanguage Indicates that the client accepts the following languages.
+        * @param ifNoneMatch ETag value to identify the last known version of requested resource.\\ To avoid useless exchange, we recommend you to indicate the ETag you previously got from this operation.\\ If the ETag value does not match the response will be 200 to give you a new content, otherwise the response will be: 304 Not Modified, without any content.\\ For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3 
         */
-    public getUserListOfValues (listName: string, acceptLanguage?: Array<string>, extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.BeezUPCommonListOfValueItem>> {
-        const localVarPath = this.basePath + '/v2/user/lov/{listName}'
+    public getUserListOfValues (listName: string, acceptLanguage?: Array<string>, ifNoneMatch?: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.UserListOfValuesResponse> {
+        const localVarPath = this.basePath + '/user/lov/{listName}'
             .replace('{' + 'listName' + '}', String(listName));
 
         let queryParameters: any = {};
@@ -3333,6 +3537,30 @@ export class BeezUPApi {
         }
         headerParams['Accept-Language'] = acceptLanguage;
 
+        headerParams['If-None-Match'] = ifNoneMatch;
+
+        let httpRequestParams: ng.IRequestConfig = {
+            method: 'GET',
+            url: localVarPath,
+                                    params: queryParameters,
+            headers: headerParams
+        };
+
+        if (extraHttpRequestParams) {
+            httpRequestParams = (<any>Object).assign(httpRequestParams, extraHttpRequestParams);
+        }
+
+        return this.$http(httpRequestParams);
+    }
+    /**
+        * Get all list names
+        * 
+        */
+    public getUserLovIndex (extraHttpRequestParams?: any ) : ng.IHttpPromise<models.UserLovIndex> {
+        const localVarPath = this.basePath + '/user/lov/';
+
+        let queryParameters: any = {};
+        let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
         let httpRequestParams: ng.IRequestConfig = {
             method: 'GET',
             url: localVarPath,
@@ -3351,7 +3579,7 @@ export class BeezUPApi {
         * 
         */
     public harvestAll (extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/marketplaces/orders/harvest';
+        const localVarPath = this.basePath + '/user/marketplaces/orders/harvest';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -3376,7 +3604,7 @@ export class BeezUPApi {
         * @param beezUPOrderId The BeezUP Order identifier
         */
     public harvestOrder (marketplaceTechnicalCode: string, accountId: number, beezUPOrderId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/harvest'
+        const localVarPath = this.basePath + '/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/harvest'
             .replace('{' + 'marketplaceTechnicalCode' + '}', String(marketplaceTechnicalCode))
             .replace('{' + 'accountId' + '}', String(accountId))
             .replace('{' + 'beezUPOrderId' + '}', String(beezUPOrderId));
@@ -3414,7 +3642,7 @@ export class BeezUPApi {
         * @param storeId Your store identifier
         */
     public importationActivateAutoImport (storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/autoImport'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/autoImport'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -3443,7 +3671,7 @@ export class BeezUPApi {
         * @param executionId The execution identifier of you catalog importation
         */
     public importationCancel (storeId: string, executionId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/importations/{executionId}'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/importations/{executionId}'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'executionId' + '}', String(executionId));
 
@@ -3477,7 +3705,7 @@ export class BeezUPApi {
         * @param executionId The execution identifier of you catalog importation
         */
     public importationCommit (storeId: string, executionId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/importations/{executionId}/commit'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/importations/{executionId}/commit'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'executionId' + '}', String(executionId));
 
@@ -3511,7 +3739,7 @@ export class BeezUPApi {
         * @param executionId The execution identifier of you catalog importation
         */
     public importationCommitColumns (storeId: string, executionId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/importations/{executionId}/commitColumns'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/importations/{executionId}/commitColumns'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'executionId' + '}', String(executionId));
 
@@ -3547,7 +3775,7 @@ export class BeezUPApi {
         * @param request 
         */
     public importationConfigureCatalogColumn (storeId: string, executionId: string, columnId: string, request: models.ConfigureCatalogColumnCatalogRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'executionId' + '}', String(executionId))
             .replace('{' + 'columnId' + '}', String(columnId));
@@ -3591,7 +3819,7 @@ export class BeezUPApi {
         * @param executionId The execution identifier of you catalog importation
         */
     public importationConfigureRemainingCatalogColumns (storeId: string, executionId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/importations/{executionId}/configureRemainingCatalogColumns'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/importations/{executionId}/configureRemainingCatalogColumns'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'executionId' + '}', String(executionId));
 
@@ -3626,7 +3854,7 @@ export class BeezUPApi {
         * @param columnId The custom column identifier
         */
     public importationDeleteCustomColumn (storeId: string, executionId: string, columnId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'executionId' + '}', String(executionId))
             .replace('{' + 'columnId' + '}', String(columnId));
@@ -3666,7 +3894,7 @@ export class BeezUPApi {
         * @param columnId The custom column identifier
         */
     public importationGetCustomColumnExpression (storeId: string, executionId: string, columnId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<string> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}/expression'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}/expression'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'executionId' + '}', String(executionId))
             .replace('{' + 'columnId' + '}', String(columnId));
@@ -3705,7 +3933,7 @@ export class BeezUPApi {
         * @param executionId The execution identifier of you catalog importation
         */
     public importationGetCustomColumns (storeId: string, executionId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.CustomColumns> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/importations/{executionId}/customColumns'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'executionId' + '}', String(executionId));
 
@@ -3739,7 +3967,7 @@ export class BeezUPApi {
         * @param executionId The execution identifier of you catalog importation
         */
     public importationGetDetectedCatalogColumns (storeId: string, executionId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.DetectedCatalogColumns> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/importations/{executionId}/catalogColumns'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'executionId' + '}', String(executionId));
 
@@ -3773,7 +4001,7 @@ export class BeezUPApi {
         * @param executionId The execution identifier of you catalog importation
         */
     public importationGetImportationMonitoring (storeId: string, executionId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ImportationMonitoring> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/importations/{executionId}'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/importations/{executionId}'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'executionId' + '}', String(executionId));
 
@@ -3806,7 +4034,7 @@ export class BeezUPApi {
         * @param storeId Your store identifier
         */
     public importationGetManualUpdateLastInputConfig (storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.LastManualImportInputConfiguration> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/inputConfiguration'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/inputConfiguration'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -3836,7 +4064,7 @@ export class BeezUPApi {
         * @param productSampleIndex Index of the product sample. Starting from 0 to 99.
         */
     public importationGetProductSample (storeId: string, executionId: string, productSampleIndex: number, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ProductSample> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/importations/{executionId}/productSamples/{productSampleIndex}'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/importations/{executionId}/productSamples/{productSampleIndex}'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'executionId' + '}', String(executionId))
             .replace('{' + 'productSampleIndex' + '}', String(productSampleIndex));
@@ -3877,7 +4105,7 @@ export class BeezUPApi {
         * @param columnId The custom column identifier
         */
     public importationGetProductSampleCustomColumnValue (storeId: string, executionId: string, productSampleIndex: number, columnId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<string> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/importations/{executionId}/productSamples/{productSampleIndex}/customColumns/{columnId}'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/importations/{executionId}/productSamples/{productSampleIndex}/customColumns/{columnId}'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'executionId' + '}', String(executionId))
             .replace('{' + 'productSampleIndex' + '}', String(productSampleIndex))
@@ -3920,7 +4148,7 @@ export class BeezUPApi {
         * @param storeId Your store identifier
         */
     public importationGetReportings (storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.ImportationReporting>> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/importations'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/importations'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -3950,7 +4178,7 @@ export class BeezUPApi {
         * @param columnId The custom column identifier
         */
     public importationIgnoreColumn (storeId: string, executionId: string, columnId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}/ignore'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}/ignore'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'executionId' + '}', String(executionId))
             .replace('{' + 'columnId' + '}', String(columnId));
@@ -3991,7 +4219,7 @@ export class BeezUPApi {
         * @param request 
         */
     public importationMapCatalogColumn (storeId: string, executionId: string, columnId: string, request: models.MapBeezUPColumnRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}/map'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}/map'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'executionId' + '}', String(executionId))
             .replace('{' + 'columnId' + '}', String(columnId));
@@ -4037,7 +4265,7 @@ export class BeezUPApi {
         * @param request 
         */
     public importationMapCustomColumn (storeId: string, executionId: string, columnId: string, request: models.MapBeezUPColumnRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}/map'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}/map'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'executionId' + '}', String(executionId))
             .replace('{' + 'columnId' + '}', String(columnId));
@@ -4082,7 +4310,7 @@ export class BeezUPApi {
         * @param columnId The custom column identifier
         */
     public importationReattendColumn (storeId: string, executionId: string, columnId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}/reattend'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}/reattend'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'executionId' + '}', String(executionId))
             .replace('{' + 'columnId' + '}', String(columnId));
@@ -4123,7 +4351,7 @@ export class BeezUPApi {
         * @param request 
         */
     public importationSaveCustomColumn (storeId: string, executionId: string, columnId: string, request: models.ChangeCustomColumnRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'executionId' + '}', String(executionId))
             .replace('{' + 'columnId' + '}', String(columnId));
@@ -4166,8 +4394,8 @@ export class BeezUPApi {
         * @param storeId Your store identifier
         * @param request 
         */
-    public importationStartManualUpdate (storeId: string, request: models.StartManualImportRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<Array<models.BeezUPCommonLink2>> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/importations'
+    public importationStartManualUpdate (storeId: string, request: models.StartManualImportRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.LinksImportationGetImportationMonitoringLink> {
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/importations'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -4201,7 +4429,7 @@ export class BeezUPApi {
         * @param executionId The execution identifier of you catalog importation
         */
     public importationTechnicalProgression (storeId: string, executionId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ImportationTechnicalProgression> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/importations/{executionId}/technicalProgression'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/importations/{executionId}/technicalProgression'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'executionId' + '}', String(executionId));
 
@@ -4236,7 +4464,7 @@ export class BeezUPApi {
         * @param columnId The catalog column identifier
         */
     public importationUnmapCatalogColumn (storeId: string, executionId: string, columnId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}/unmap'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}/unmap'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'executionId' + '}', String(executionId))
             .replace('{' + 'columnId' + '}', String(columnId));
@@ -4276,7 +4504,7 @@ export class BeezUPApi {
         * @param columnId The custom column identifier
         */
     public importationUnmapCustomColumn (storeId: string, executionId: string, columnId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}/unmap'
+        const localVarPath = this.basePath + '/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}/unmap'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'executionId' + '}', String(executionId))
             .replace('{' + 'columnId' + '}', String(columnId));
@@ -4309,11 +4537,39 @@ export class BeezUPApi {
         return this.$http(httpRequestParams);
     }
     /**
+        * Login
+        * User Login - The login will give your tokens
+        * @param request 
+        */
+    public login (request: models.LoginRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.ApiCredentials> {
+        const localVarPath = this.basePath + '/public/security/login';
+
+        let queryParameters: any = {};
+        let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling login.');
+        }
+        let httpRequestParams: ng.IRequestConfig = {
+            method: 'POST',
+            url: localVarPath,
+            data: request,
+                        params: queryParameters,
+            headers: headerParams
+        };
+
+        if (extraHttpRequestParams) {
+            httpRequestParams = (<any>Object).assign(httpRequestParams, extraHttpRequestParams);
+        }
+
+        return this.$http(httpRequestParams);
+    }
+    /**
         * Log out the current user from go2
         * Log out the current user from go2
         */
     public logout (extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/customer/security/logout';
+        const localVarPath = this.basePath + '/user/customer/security/logout';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -4331,13 +4587,41 @@ export class BeezUPApi {
         return this.$http(httpRequestParams);
     }
     /**
+        * Lost password
+        * Lost password - Your password will be regenerated and sent to your email
+        * @param email Your email
+        */
+    public lostPassword (email: models.BeezUPCommonEmail, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
+        const localVarPath = this.basePath + '/public/security/lostpassword';
+
+        let queryParameters: any = {};
+        let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
+        // verify required parameter 'email' is not null or undefined
+        if (email === null || email === undefined) {
+            throw new Error('Required parameter email was null or undefined when calling lostPassword.');
+        }
+        let httpRequestParams: ng.IRequestConfig = {
+            method: 'POST',
+            url: localVarPath,
+            data: email,
+                        params: queryParameters,
+            headers: headerParams
+        };
+
+        if (extraHttpRequestParams) {
+            httpRequestParams = (<any>Object).assign(httpRequestParams, extraHttpRequestParams);
+        }
+
+        return this.$http(httpRequestParams);
+    }
+    /**
         * Map channel catalog category
         * 
         * @param channelCatalogId The channel catalog identifier
         * @param request 
         */
     public mapChannelCatalogCategory (channelCatalogId: string, request: models.MapCategoryRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/channelCatalogs/{channelCatalogId}/categoryMappings/map'
+        const localVarPath = this.basePath + '/user/channelCatalogs/{channelCatalogId}/categoryMappings/map'
             .replace('{' + 'channelCatalogId' + '}', String(channelCatalogId));
 
         let queryParameters: any = {};
@@ -4371,7 +4655,7 @@ export class BeezUPApi {
         * @param request 
         */
     public mapChannelCatalogColumns (channelCatalogId: string, request: models.ColumnMappingList, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/channelCatalogs/{channelCatalogId}/columnMappings'
+        const localVarPath = this.basePath + '/user/channelCatalogs/{channelCatalogId}/columnMappings'
             .replace('{' + 'channelCatalogId' + '}', String(channelCatalogId));
 
         let queryParameters: any = {};
@@ -4405,7 +4689,7 @@ export class BeezUPApi {
         * @param ruleId Your rule identifier
         */
     public moveDownRule (storeId: string, ruleId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/rules/{ruleId}/movedown'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/rules/{ruleId}/movedown'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'ruleId' + '}', String(ruleId));
 
@@ -4439,7 +4723,7 @@ export class BeezUPApi {
         * @param ruleId Your rule identifier
         */
     public moveUpRule (storeId: string, ruleId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/rules/{ruleId}/moveup'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/rules/{ruleId}/moveup'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'ruleId' + '}', String(ruleId));
 
@@ -4474,7 +4758,7 @@ export class BeezUPApi {
         * @param request 
         */
     public optimise (storeId: string, actionName: string, request: models.OptimiseRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/optimisations/{actionName}'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/optimisations/{actionName}'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'actionName' + '}', String(actionName));
 
@@ -4515,7 +4799,7 @@ export class BeezUPApi {
         * @param request The channel identifier list concerned by this optimisation
         */
     public optimiseByCategory (storeId: string, catalogCategoryId: string, actionName: string, request?: Array<string>, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/optimisations/bycategory/{catalogCategoryId}/{actionName}'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/optimisations/bycategory/{catalogCategoryId}/{actionName}'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'catalogCategoryId' + '}', String(catalogCategoryId))
             .replace('{' + 'actionName' + '}', String(actionName));
@@ -4556,7 +4840,7 @@ export class BeezUPApi {
         * @param actionName 
         */
     public optimiseByChannel (storeId: string, channelId: string, actionName: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/optimisations/bychannel/{channelId}/{actionName}'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/optimisations/bychannel/{channelId}/{actionName}'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'channelId' + '}', String(channelId))
             .replace('{' + 'actionName' + '}', String(actionName));
@@ -4597,7 +4881,7 @@ export class BeezUPApi {
         * @param request The channel identifier list concerned by this optimisation
         */
     public optimiseByProduct (storeId: string, productId: string, actionName: string, request?: Array<string>, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/optimisations/byproduct/{productId}/{actionName}'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/optimisations/byproduct/{productId}/{actionName}'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'productId' + '}', String(productId))
             .replace('{' + 'actionName' + '}', String(actionName));
@@ -4638,7 +4922,7 @@ export class BeezUPApi {
         * @param request 
         */
     public overrideChannelCatalogProductOverrides (channelCatalogId: string, productId: string, request: models.ProductOverrides, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/overrides'
+        const localVarPath = this.basePath + '/user/channelCatalogs/{channelCatalogId}/products/{productId}/overrides'
             .replace('{' + 'channelCatalogId' + '}', String(channelCatalogId))
             .replace('{' + 'productId' + '}', String(productId));
 
@@ -4675,7 +4959,7 @@ export class BeezUPApi {
         * By calling this operation you can re-enable the auto renewal.
         */
     public reactivateCurrentContract (extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/customer/contracts/current/reenableAutoRenewal';
+        const localVarPath = this.basePath + '/user/customer/contracts/current/reenableAutoRenewal';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -4699,7 +4983,7 @@ export class BeezUPApi {
         * @param productId The product identifier
         */
     public reenableChannelCatalogProduct (channelCatalogId: string, productId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/reenable'
+        const localVarPath = this.basePath + '/user/channelCatalogs/{channelCatalogId}/products/{productId}/reenable'
             .replace('{' + 'channelCatalogId' + '}', String(channelCatalogId))
             .replace('{' + 'productId' + '}', String(productId));
 
@@ -4727,11 +5011,39 @@ export class BeezUPApi {
         return this.$http(httpRequestParams);
     }
     /**
+        * User Registration
+        * User Registration - Create a new user on BeezUP
+        * @param request 
+        */
+    public register (request: models.RegisterRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
+        const localVarPath = this.basePath + '/public/security/register';
+
+        let queryParameters: any = {};
+        let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
+        // verify required parameter 'request' is not null or undefined
+        if (request === null || request === undefined) {
+            throw new Error('Required parameter request was null or undefined when calling register.');
+        }
+        let httpRequestParams: ng.IRequestConfig = {
+            method: 'POST',
+            url: localVarPath,
+            data: request,
+                        params: queryParameters,
+            headers: headerParams
+        };
+
+        if (extraHttpRequestParams) {
+            httpRequestParams = (<any>Object).assign(httpRequestParams, extraHttpRequestParams);
+        }
+
+        return this.$http(httpRequestParams);
+    }
+    /**
         * Resend email activation
         * 
         */
     public resendEmailActivation (extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/customer/account/resendEmailActivation';
+        const localVarPath = this.basePath + '/user/customer/account/resendEmailActivation';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -4755,7 +5067,7 @@ export class BeezUPApi {
         * @param ruleId Your rule identifier
         */
     public runRule (storeId: string, ruleId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/rules/{ruleId}/run'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/rules/{ruleId}/run'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'ruleId' + '}', String(ruleId));
 
@@ -4788,7 +5100,7 @@ export class BeezUPApi {
         * @param storeId Your store identifier
         */
     public runRules (storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/rules/run'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/rules/run'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -4816,7 +5128,7 @@ export class BeezUPApi {
         * @param request 
         */
     public saveCompanyInfo (request: models.CompanyInfo, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/customer/account/companyInfo';
+        const localVarPath = this.basePath + '/user/customer/account/companyInfo';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -4844,7 +5156,7 @@ export class BeezUPApi {
         * @param request Credit card info
         */
     public saveCreditCardInfo (request: models.CreditCardInfo, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/customer/account/creditCardInfo';
+        const localVarPath = this.basePath + '/user/customer/account/creditCardInfo';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -4872,7 +5184,7 @@ export class BeezUPApi {
         * @param request 
         */
     public savePersonalInfo (request: models.PersonalInfo, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/customer/account/personalInfo';
+        const localVarPath = this.basePath + '/user/customer/account/personalInfo';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -4900,7 +5212,7 @@ export class BeezUPApi {
         * @param request 
         */
     public saveProfilePictureInfo (request: models.ProfilePictureInfo, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/customer/account/profilePictureInfo';
+        const localVarPath = this.basePath + '/user/customer/account/profilePictureInfo';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -4930,7 +5242,7 @@ export class BeezUPApi {
         * @param reportFilter 
         */
     public saveReportFilter (storeId: string, reportFilterId: string, reportFilter: models.SaveReportFilterRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/reports/filters/{reportFilterId}'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/reports/filters/{reportFilterId}'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'reportFilterId' + '}', String(reportFilterId));
 
@@ -4970,7 +5282,7 @@ export class BeezUPApi {
         * @param request 
         */
     public saveStoreAlert (storeId: string, alertId: number, request: Array<models.SaveStoreAlertRequest>, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/customer/stores/{storeId}/alerts/{alertId}'
+        const localVarPath = this.basePath + '/user/customer/stores/{storeId}/alerts/{alertId}'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'alertId' + '}', String(alertId));
 
@@ -5009,7 +5321,7 @@ export class BeezUPApi {
         * @param model Settings to save
         */
     public setChannelCatalogMarketplaceSettings (channelCatalogId: string, model: models.SetChannelCatalogMarketplaceSettingsRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/marketplaces/channelcatalogs/{channelCatalogId}/settings'
+        const localVarPath = this.basePath + '/user/marketplaces/channelcatalogs/{channelCatalogId}/settings'
             .replace('{' + 'channelCatalogId' + '}', String(channelCatalogId));
 
         let queryParameters: any = {};
@@ -5045,7 +5357,7 @@ export class BeezUPApi {
         * @param request 
         */
     public setMerchantOrderInfo (marketplaceTechnicalCode: string, accountId: number, beezUPOrderId: string, request: models.SetMerchantOrderInfoRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/setMerchantOrderInfo'
+        const localVarPath = this.basePath + '/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/setMerchantOrderInfo'
             .replace('{' + 'marketplaceTechnicalCode' + '}', String(marketplaceTechnicalCode))
             .replace('{' + 'accountId' + '}', String(accountId))
             .replace('{' + 'beezUPOrderId' + '}', String(beezUPOrderId));
@@ -5088,7 +5400,7 @@ export class BeezUPApi {
         * @param request 
         */
     public setMerchantOrderInfoList (request: models.SetMerchantOrderInfoListRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.BatchOrderOperationResponse> {
-        const localVarPath = this.basePath + '/v2/user/marketplaces/orders/batches/setMerchantOrderInfos';
+        const localVarPath = this.basePath + '/user/marketplaces/orders/batches/setMerchantOrderInfos';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -5117,7 +5429,7 @@ export class BeezUPApi {
         * @param email Your friend&#39;s email
         */
     public share (storeId: string, email: models.FriendEmail, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/customer/stores/{storeId}/shares'
+        const localVarPath = this.basePath + '/user/customer/stores/{storeId}/shares'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
@@ -5150,7 +5462,7 @@ export class BeezUPApi {
         * @param request Indicate the termination reason
         */
     public terminateCurrentContract (request: models.TerminateContract, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/customer/contracts/current/disableAutoRenewal';
+        const localVarPath = this.basePath + '/user/customer/contracts/current/disableAutoRenewal';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -5179,7 +5491,7 @@ export class BeezUPApi {
         * @param request 
         */
     public unmapChannelCatalogCategory (channelCatalogId: string, request: models.UnmapCategoryRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/channelCatalogs/{channelCatalogId}/categoryMappings/unmap'
+        const localVarPath = this.basePath + '/user/channelCatalogs/{channelCatalogId}/categoryMappings/unmap'
             .replace('{' + 'channelCatalogId' + '}', String(channelCatalogId));
 
         let queryParameters: any = {};
@@ -5214,7 +5526,7 @@ export class BeezUPApi {
         * @param request 
         */
     public updateRule (storeId: string, ruleId: string, request: models.UpdateRuleRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/analytics/{storeId}/rules/{ruleId}'
+        const localVarPath = this.basePath + '/user/analytics/{storeId}/rules/{ruleId}'
             .replace('{' + 'storeId' + '}', String(storeId))
             .replace('{' + 'ruleId' + '}', String(ruleId));
 
@@ -5253,7 +5565,7 @@ export class BeezUPApi {
         * @param request 
         */
     public updateStore (storeId: string, request: models.UpdateStoreRequest, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
-        const localVarPath = this.basePath + '/v2/user/customer/stores/{storeId}'
+        const localVarPath = this.basePath + '/user/customer/stores/{storeId}'
             .replace('{' + 'storeId' + '}', String(storeId));
 
         let queryParameters: any = {};
