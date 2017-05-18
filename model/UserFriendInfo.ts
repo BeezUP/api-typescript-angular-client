@@ -35,6 +35,6 @@ export interface UserFriendInfo {
     /**
      * Your friend's user occupation in his company
      */
-    "whatIDo": string;
+    "whatIDo"?: string;
 }
 

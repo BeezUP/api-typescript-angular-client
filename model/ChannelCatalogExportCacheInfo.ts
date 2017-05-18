@@ -29,5 +29,9 @@ export interface ChannelCatalogExportCacheInfo {
      * The expiration UTC date of the cache
      */
     "expirationUtcDate"?: Date;
+    /**
+     * The feed url
+     */
+    "feedUrl"?: string;
 }
 

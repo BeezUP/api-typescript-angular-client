@@ -14,6 +14,10 @@ import * as models from './models';
 
 export interface BeezUPCommonLinkParameter3 {
     /**
+     * The label corresponding to the link parameter. This label is automatically translated based on the Accept-Language http header.
+     */
+    "label"?: string;
+    /**
      * The value of the parameter. It can be an integer a string or an object.
      */
     "value"?: any;

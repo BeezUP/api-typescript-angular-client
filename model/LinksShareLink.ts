@@ -13,6 +13,10 @@
 import * as models from './models';
 
 export interface LinksShareLink {
+    /**
+     * The label corresponding to the link. This label is automatically translated based on the Accept-Language http header.
+     */
+    "label"?: string;
     "docUrl"?: models.BeezUPCommonDocUrl;
     /**
      * The description of the link
@@ -25,7 +29,15 @@ export interface LinksShareLink {
     /**
      * indicates whether the href is templated or not
      */
-    "templated"?: boolean;
+    "urlTemplated"?: boolean;
+    /**
+     * indicates whether all required params have been provided
+     */
+    "allRequiredParamsProvided"?: boolean;
+    /**
+     * indicates whether all optionals params have been provided
+     */
+    "allOptionalParamsProvided"?: boolean;
     "info"?: models.BeezUPCommonInfoSummaries;
 }
 

@@ -12,15 +12,6 @@
 
 import * as models from './models';
 
-/**
- * Describe the history related to an order
- */
-export interface OrderHistory {
-    /**
-     * The list of change order operation
-     */
-    "changeOrderReportings"?: Array<models.ChangeOrderReporting>;
-    "harvestOrderReportings"?: Array<models.HarvestOrderReporting>;
-    "lastModificationUtcDate"?: Date;
+export interface CustomerIndexLovLinks {
 }
 

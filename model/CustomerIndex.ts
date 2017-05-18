@@ -13,14 +13,10 @@
 import * as models from './models';
 
 /**
- * Describe the history related to an order
+ * The index of the customer API
  */
-export interface OrderHistory {
-    /**
-     * The list of change order operation
-     */
-    "changeOrderReportings"?: Array<models.ChangeOrderReporting>;
-    "harvestOrderReportings"?: Array<models.HarvestOrderReporting>;
-    "lastModificationUtcDate"?: Date;
+export interface CustomerIndex {
+    "links": models.CustomerIndexLinks;
+    "lovLinks": models.CustomerIndexLovLinks;
 }
 

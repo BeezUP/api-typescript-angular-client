@@ -14,7 +14,7 @@ import * as models from './models';
 
 export interface CreditCardInfoResponse {
     "links"?: models.CreditCardInfoResponseLinks;
-    "currentPaymentMethod": models.PaymentMethod;
+    "currentPaymentMethod"?: models.PaymentMethod;
     "creditCardInfo"?: models.CreditCardInfoWithCardType;
     "info"?: models.BeezUPCommonInfoSummaries;
 }

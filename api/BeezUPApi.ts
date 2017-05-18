@@ -1765,12 +1765,15 @@ export class BeezUPApi {
     /**
         * Get list of configured automatic Order status transitions
         * 
+        * @param ifNoneMatch ETag value to identify the last known version of requested resource.\\ To avoid useless exchange, we recommend you to indicate the ETag you previously got from this operation.\\ If the ETag value does not match the response will be 200 to give you a new content, otherwise the response will be: 304 Not Modified, without any content.\\ For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3 
         */
-    public getAutomaticTransitions (extraHttpRequestParams?: any ) : ng.IHttpPromise<models.AutomaticTransitionInfos> {
+    public getAutomaticTransitions (ifNoneMatch?: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.AutomaticTransitionInfos> {
         const localVarPath = this.basePath + '/user/marketplaces/orders/automaticTransitions';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
+        headerParams['If-None-Match'] = ifNoneMatch;
+
         let httpRequestParams: ng.IRequestConfig = {
             method: 'GET',
             url: localVarPath,
@@ -2442,12 +2445,15 @@ export class BeezUPApi {
     /**
         * Get current synchronization status between your marketplaces and BeezUP accounts
         * 
+        * @param ifNoneMatch ETag value to identify the last known version of requested resource.\\ To avoid useless exchange, we recommend you to indicate the ETag you previously got from this operation.\\ If the ETag value does not match the response will be 200 to give you a new content, otherwise the response will be: 304 Not Modified, without any content.\\ For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3 
         */
-    public getMarketplaceAccountsSynchronization (extraHttpRequestParams?: any ) : ng.IHttpPromise<models.AccountSynchronizations> {
+    public getMarketplaceAccountsSynchronization (ifNoneMatch?: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.AccountSynchronizations> {
         const localVarPath = this.basePath + '/user/marketplaces/orders/status';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
+        headerParams['If-None-Match'] = ifNoneMatch;
+
         let httpRequestParams: ng.IRequestConfig = {
             method: 'GET',
             url: localVarPath,
@@ -2538,8 +2544,9 @@ export class BeezUPApi {
         * @param pageNumber The page number you want to get
         * @param pageSize The entry count you want to get
         * @param storeId The store identifier to regroup the order exportations
+        * @param ifNoneMatch ETag value to identify the last known version of requested resource.\\ To avoid useless exchange, we recommend you to indicate the ETag you previously got from this operation.\\ If the ETag value does not match the response will be 200 to give you a new content, otherwise the response will be: 304 Not Modified, without any content.\\ For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3 
         */
-    public getOrderExportations (pageNumber: number, pageSize: number, storeId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.OrderExportations> {
+    public getOrderExportations (pageNumber: number, pageSize: number, storeId: string, ifNoneMatch?: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.OrderExportations> {
         const localVarPath = this.basePath + '/user/marketplaces/orders/exportations';
 
         let queryParameters: any = {};
@@ -2568,6 +2575,8 @@ export class BeezUPApi {
             queryParameters['storeId'] = storeId;
         }
 
+        headerParams['If-None-Match'] = ifNoneMatch;
+
         let httpRequestParams: ng.IRequestConfig = {
             method: 'GET',
             url: localVarPath,
@@ -2587,8 +2596,9 @@ export class BeezUPApi {
         * @param marketplaceTechnicalCode The marketplace technical code
         * @param accountId The account identifier
         * @param beezUPOrderId The BeezUP Order identifier
+        * @param ifNoneMatch ETag value to identify the last known version of requested resource.\\ To avoid useless exchange, we recommend you to indicate the ETag you previously got from this operation.\\ If the ETag value does not match the response will be 200 to give you a new content, otherwise the response will be: 304 Not Modified, without any content.\\ For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3 
         */
-    public getOrderHistory (marketplaceTechnicalCode: string, accountId: number, beezUPOrderId: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.OrderHistory> {
+    public getOrderHistory (marketplaceTechnicalCode: string, accountId: number, beezUPOrderId: string, ifNoneMatch?: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.OrderHistory> {
         const localVarPath = this.basePath + '/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/history'
             .replace('{' + 'marketplaceTechnicalCode' + '}', String(marketplaceTechnicalCode))
             .replace('{' + 'accountId' + '}', String(accountId))
@@ -2608,6 +2618,8 @@ export class BeezUPApi {
         if (beezUPOrderId === null || beezUPOrderId === undefined) {
             throw new Error('Required parameter beezUPOrderId was null or undefined when calling getOrderHistory.');
         }
+        headerParams['If-None-Match'] = ifNoneMatch;
+
         let httpRequestParams: ng.IRequestConfig = {
             method: 'GET',
             url: localVarPath,
@@ -2624,12 +2636,15 @@ export class BeezUPApi {
     /**
         * Get all actions you can do on the order API
         * 
+        * @param ifNoneMatch ETag value to identify the last known version of requested resource.\\ To avoid useless exchange, we recommend you to indicate the ETag you previously got from this operation.\\ If the ETag value does not match the response will be 200 to give you a new content, otherwise the response will be: 304 Not Modified, without any content.\\ For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3 
         */
-    public getOrderIndex (extraHttpRequestParams?: any ) : ng.IHttpPromise<models.OrderIndex> {
+    public getOrderIndex (ifNoneMatch?: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<models.OrderIndex> {
         const localVarPath = this.basePath + '/user/marketplaces/orders/';
 
         let queryParameters: any = {};
         let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
+        headerParams['If-None-Match'] = ifNoneMatch;
+
         let httpRequestParams: ng.IRequestConfig = {
             method: 'GET',
             url: localVarPath,
@@ -3625,6 +3640,49 @@ export class BeezUPApi {
         }
         let httpRequestParams: ng.IRequestConfig = {
             method: 'POST',
+            url: localVarPath,
+                                    params: queryParameters,
+            headers: headerParams
+        };
+
+        if (extraHttpRequestParams) {
+            httpRequestParams = (<any>Object).assign(httpRequestParams, extraHttpRequestParams);
+        }
+
+        return this.$http(httpRequestParams);
+    }
+    /**
+        * Get the meta information about the order (ETag, Last-Modified)
+        * The purpose of this operation is to reduce the bandwith usage by getting just the meta information about the order (ETag, Last-Modified) with the body. This could be useful  
+        * @param marketplaceTechnicalCode The marketplace technical code
+        * @param accountId The account identifier
+        * @param beezUPOrderId The BeezUP Order identifier
+        * @param ifNoneMatch ETag value to identify the last known version of requested resource.\\ To avoid useless exchange, we recommend you to indicate the ETag you previously got from this operation.\\ If the ETag value does not match the response will be 200 to give you a new content, otherwise the response will be: 304 Not Modified, without any content.\\ For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3 
+        */
+    public headOrder (marketplaceTechnicalCode: string, accountId: number, beezUPOrderId: string, ifNoneMatch?: string, extraHttpRequestParams?: any ) : ng.IHttpPromise<{}> {
+        const localVarPath = this.basePath + '/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}'
+            .replace('{' + 'marketplaceTechnicalCode' + '}', String(marketplaceTechnicalCode))
+            .replace('{' + 'accountId' + '}', String(accountId))
+            .replace('{' + 'beezUPOrderId' + '}', String(beezUPOrderId));
+
+        let queryParameters: any = {};
+        let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
+        // verify required parameter 'marketplaceTechnicalCode' is not null or undefined
+        if (marketplaceTechnicalCode === null || marketplaceTechnicalCode === undefined) {
+            throw new Error('Required parameter marketplaceTechnicalCode was null or undefined when calling headOrder.');
+        }
+        // verify required parameter 'accountId' is not null or undefined
+        if (accountId === null || accountId === undefined) {
+            throw new Error('Required parameter accountId was null or undefined when calling headOrder.');
+        }
+        // verify required parameter 'beezUPOrderId' is not null or undefined
+        if (beezUPOrderId === null || beezUPOrderId === undefined) {
+            throw new Error('Required parameter beezUPOrderId was null or undefined when calling headOrder.');
+        }
+        headerParams['If-None-Match'] = ifNoneMatch;
+
+        let httpRequestParams: ng.IRequestConfig = {
+            method: 'HEAD',
             url: localVarPath,
                                     params: queryParameters,
             headers: headerParams
@@ -5583,6 +5641,28 @@ export class BeezUPApi {
             url: localVarPath,
             data: request,
                         params: queryParameters,
+            headers: headerParams
+        };
+
+        if (extraHttpRequestParams) {
+            httpRequestParams = (<any>Object).assign(httpRequestParams, extraHttpRequestParams);
+        }
+
+        return this.$http(httpRequestParams);
+    }
+    /**
+        * The index of all operations and LOV
+        * 
+        */
+    public userCustomerGet (extraHttpRequestParams?: any ) : ng.IHttpPromise<models.CustomerIndex> {
+        const localVarPath = this.basePath + '/user/customer/';
+
+        let queryParameters: any = {};
+        let headerParams: any = (<any>Object).assign({}, this.defaultHeaders);
+        let httpRequestParams: ng.IRequestConfig = {
+            method: 'GET',
+            url: localVarPath,
+                                    params: queryParameters,
             headers: headerParams
         };
 
